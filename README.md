@@ -1,1 +1,2 @@
-# Galeria-de-Pinturas-e-Artesanatos
+# Galeria-de-Arte
+Galeria de Arte
