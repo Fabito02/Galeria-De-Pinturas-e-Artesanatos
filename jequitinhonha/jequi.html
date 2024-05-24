@@ -10,25 +10,25 @@
   
 </head>
 <body>
-
-<header>
-      <footer>
-  <div class="botoes">
-    <img src="../img/logo.png" alt="Imagem 1" onclick="window.location.href='../index.html'">
-    <div class="bt1">
-    <div class="link">
-        <input type="button" value="Página inicial" onclick="window.location.href='../index.html'">
-        <input type="button" value="Redes Sociais" onclick="window.location.href='Redes Sociais'">
-        <input type="button" value="Vale do Jequitinhonha" onclick="window.location.href='jequi.html'">
-        <input type="button" value="Sobre Mim" onclick="window.location.href='../sobre.html'">
-    </div></div>
-    <div class="bt2">
-    <div class="gallery">
-        <input type="button" value="Minha Galeria de Arte" onclick="window.location.href='../gallery/gallery.html'">
-    </div></div>
-      </div>
-    </footer>
-</header>
+  <header>
+    <div class="botoes">
+        <img src="../img/logo.png" alt="Imagem 1" onclick="window.location.href='../index.html'">
+        <div class="texto">
+            <input type="button" value="Minha Galeria de Arte" onclick="window.location.href='../gallery/gallery.html'">
+        </div>
+    <div class="menu" id="menu" onclick="animacaoDoMenu()">
+        <span class="barrinha-menu"></span>
+        <span class="barrinha-menu"></span>
+        <span class="barrinha-menu"></span>
+    </div>
+    <div class="dropdown" id="dropdown">
+        <a href="../index.html">Página inicial</a>
+        <a href="Redes Sociais">Redes Sociais</a>
+        <a href="jequi.html">Vale do Jequitinhonha</a>
+        <a href="../sobre.html">Sobre Mim</a>
+    </div>
+    </div>
+  </header>
 
 <main>
 
@@ -68,4 +68,5 @@
 </div>
 </main>
 </body>
+<script src="../script/script.js"></script>
 </html>
