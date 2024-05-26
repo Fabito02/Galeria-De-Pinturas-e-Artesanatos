@@ -14,16 +14,16 @@ function mostrarRedesSociais() {
     if (list.style.display === "none" || list.style.display === "") {
         list.style.display = "block";
         if (isMobile) {
-            drop.style.marginTop = "290px";
+            drop.style.marginTop = "255px";
         } else {
-            drop.style.marginTop = "513px";
+            drop.style.marginTop = "510px";
         }
     } else {
         list.style.display = "none";
         if (isMobile) {
-            drop.style.marginTop = "290px";
+            drop.style.marginTop = "255px";
         } else {
-            drop.style.marginTop = "316px";
+            drop.style.marginTop = "315px";
         }
     }
 }

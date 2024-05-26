@@ -30,16 +30,18 @@ background-color: rgb(216, 162, 127);
   background-color: #af7c4c;
   color: #fff;
   border: none;
-  padding: 6px 8px;
+  padding: 13.5px 20px;
   display: inline-block;
-  font-size: 14px;
+  font-size: 15.5px;
   margin-left: auto;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 8px;
   font-family: sans-serif;
   font-weight: bold;
   display: flex;
-  margin-right: 30px;
+  margin-right: auto;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .botoes input[type="button"]:hover {
@@ -66,8 +68,7 @@ background-color: rgb(216, 162, 127);
   border-radius: 8px;
   padding: 2px;
   margin: auto auto;
-  min-width: 85%;
-  max-width: 85%;
+  max-width: 1100px;
   height: 100%;
   justify-content: center;
 }
@@ -85,6 +86,7 @@ background-color: rgb(216, 162, 127);
   justify-content: right;
   float: right;
   margin-left: 20px;
+  margin-bottom: 10px;
 }
 
 .miniBio .quadro img {
@@ -92,6 +94,7 @@ background-color: rgb(216, 162, 127);
   border-radius: 8px;
   float: left;
   margin-right: 20px;
+  margin-bottom: 10px;
 }
 .bioTitle {
   font-weight: bold;
@@ -201,14 +204,14 @@ footer {
 
 /* dropdown */
 .dropdown {
-    display: none;
-    position: absolute;
-    right: 20px;
-    background-color: #f3e1d0;
-    box-shadow: 0px 8px 16px 0px #00000067;
-    z-index: 1;
-    margin-top: 316px;
-    border-radius: 8px;
+  display: none;
+  position: absolute;
+  right: 20px;
+  background-color: #f3e1d0;
+  box-shadow: 0px 8px 16px 0px #00000067;
+  z-index: 1;
+  margin-top: 315px;
+  border-radius: 8px;
 }
 .menu.active + .dropdown {
     display: block;
@@ -272,21 +275,6 @@ footer {
       margin-left: 16px;
       margin-bottom: 10px;
   }
-  .botoes input[type="button"] {
-    background-color: #af7c4c;
-    color: #fff;
-    border: none;
-    padding: 6px 8px;
-    display: inline-block;
-    font-size: 13px;
-    position: absolute;
-    cursor: pointer;
-    border-radius: 5px;
-    font-family: sans-serif;
-    font-weight: bold;
-    display: flex;
-    margin-right: 30px;
-  }
   .bio {
       min-width: 90%;
       max-width: 90%;
@@ -317,7 +305,7 @@ footer {
   .menu {
     margin-bottom: 15px; 
     margin-right: auto;
-    margin-left: 25px;
+    margin-left: 10px;
     z-index: 1;
   }
   .dropdown {
@@ -329,9 +317,6 @@ footer {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
     z-index: 1;
     border-radius: 8px;
-  }
-  .botoes input[type="button"] {
-    margin-left: 0;
   }
   .slider {
     width: 300px;
@@ -355,7 +340,7 @@ footer {
   
   }
   .dropdown {
-    margin-top: 290px;
+    margin-top: 255px;
 }
   .dot {
     cursor: pointer;
