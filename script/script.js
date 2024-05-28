@@ -16,7 +16,7 @@ function mostrarRedesSociais() {
         if (isMobile) {
             drop.style.marginTop = "255px";
         } else {
-            drop.style.marginTop = "510px";
+            drop.style.marginTop = "511px";
         }
     } else {
         list.style.display = "none";
