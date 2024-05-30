@@ -34,6 +34,8 @@ function toggleSocial() {
     social.classList.toggle("active");
   }
 
+
+  //Slider
    
 // Seleciona todas as imagens do slider e todos os pontos (dots)
 var imgs = document.querySelectorAll('.slider img');

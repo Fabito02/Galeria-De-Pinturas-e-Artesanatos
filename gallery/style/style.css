@@ -37,7 +37,7 @@ header {
   font-weight: bold;
   display: flex;
   justify-content: center;  
-  align-items: center; 
+  align-items: center;
   margin-left: 8px;
   width: calc(100% - 16px);
   margin-top: 10px;
