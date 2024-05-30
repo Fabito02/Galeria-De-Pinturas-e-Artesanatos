@@ -2,7 +2,6 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: #fff8f4;
     color: #53392a;
-    font-weight: bold;
   }
 ::selection {
 background-color: rgb(216, 162, 127);
