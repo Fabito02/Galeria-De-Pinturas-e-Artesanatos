@@ -1,5 +1,5 @@
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter';
     background-color: #fff8f4;
     color: #53392a;
   }
@@ -9,7 +9,7 @@ background-color: rgb(216, 162, 127);
 header {
   padding: 10px 0;
   text-align: center;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter';
   border-color: #8a604b;
   border-radius: 8px;
   background-color: #f3e1d0b4;
@@ -41,7 +41,7 @@ header {
   font-size: 15.5px;
   cursor: pointer;
   border-radius: 8px;
-  font-family: sans-serif;
+  font-family: 'Inter';
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -71,7 +71,7 @@ textarea {
     border-style: none;
 }
 h1 {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter';
     font-size: 36px;
     color: #50372a;
     font-style: initial;
@@ -93,7 +93,7 @@ h1 {
   align-items: center;
   position: relative;
 }
-.form input[type="button"] {
+.form input[type="button"], .form input[type="submit"] {
    background-color: #a07146;
    color: #fff;
    border: none;
@@ -101,7 +101,7 @@ h1 {
    font-size: 15.5px;
    cursor: pointer;
    border-radius: 5px;
-   font-family: sans-serif;
+   font-family: 'Inter';
    font-weight: bold;
    display: flex;
    justify-content: center;  
@@ -112,7 +112,7 @@ h1 {
    text-align: center;
  }
  
-.form input[type="button"]:hover {
+.form input[type="button"]:hover, .form input[type="submit"]:hover {
     background-color: #66492d;
   }
 

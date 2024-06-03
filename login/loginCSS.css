@@ -53,7 +53,7 @@ input[type = "password"] {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter';
   background-color: #fff8f4;
   text-align: center;
   margin-top: 15%;

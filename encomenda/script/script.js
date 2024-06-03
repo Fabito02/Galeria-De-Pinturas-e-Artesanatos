@@ -48,10 +48,11 @@ function toggleSocial() {
     var descricaoPedido = document.getElementById('descricao').value;
     var cidadeCliente = document.getElementById('cidadeCliente').value.trim();
     var bairroCliente = document.getElementById('bairroCliente').value.trim();
+    var ruaCliente = document.getElementById('ruaCliente').value.trim();
     var linkImagem = document.getElementById('link').value.trim();
     var casaCliente = document.getElementById('casaCliente').value;
   
-    if (nomeCliente === "" || emailCliente === "" || telefoneCliente === "" || descricaoPedido === "" || cidadeCliente === "" || bairroCliente === "" || isNaN(casaCliente)) {
+    if (nomeCliente === "" || emailCliente === "" || telefoneCliente === "" || descricaoPedido === "" || cidadeCliente === "" || bairroCliente === "" || isNaN(casaCliente) || ruaCliente === "" || isNaN(telefoneCliente) || casaCliente === "") {
       alert("Preencha todos os campos corretamente");
       return;
     }
@@ -66,7 +67,8 @@ function toggleSocial() {
       cidade: cidadeCliente,
       bairro: bairroCliente,
       casa: casaCliente,
-      link: linkImagem
+      link: linkImagem,
+      rua: ruaCliente,
     }).then(function(response) {
       alert("Pedido enviado com sucesso!");
     }, function(error) {

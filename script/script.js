@@ -12,18 +12,18 @@ function mostrarRedesSociais() {
     var isMobile = window.matchMedia("(max-width: 720px)").matches; 
 
     if (list.style.display === "none" || list.style.display === "") {
-        list.style.display = "block";
+        list.style.display = "block"
         if (isMobile) {
-            drop.style.marginTop = "255px";
+            drop.style.marginTop = "255px"
         } else {
-            drop.style.marginTop = "511px";
+            drop.style.marginTop = "566px"
         }
     } else {
-        list.style.display = "none";
+        list.style.display = "none"
         if (isMobile) {
-            drop.style.marginTop = "255px";
+            drop.style.marginTop = "255px"
         } else {
-            drop.style.marginTop = "315px";
+            drop.style.marginTop = "370px"
         }
     }
 }
