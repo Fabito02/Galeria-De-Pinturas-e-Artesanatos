@@ -41,19 +41,22 @@ function toggleSocial() {
 var imgs = document.querySelectorAll('.slider img');
 var dots = document.querySelectorAll('.dot');
 var currentImg = 0; // índice da primeira imagem
-const intervalo = 2500; // duração (velocidade) do slide
+const intervalo = 4000; // duração (velocidade) do slide
 
 function changeSlide(n) {
     // Reinicia todas as imagens e dots
     for (var i = 0; i < imgs.length; i++) {
         imgs[i].style.opacity = 0;
+        imgs[i].style.transition = 'opacity 0.5s';
         dots[i].classList.remove('active');
+        dots[i].style.transition = 'all 1s';
     }
 
     currentImg = n; // atualiza o índice da imagem atual
 
     imgs[currentImg].style.opacity = 1; // mostra a imagem atual
     dots[currentImg].classList.add('active'); // marca o dot como ativo
+    dots[currentImg].style.transition = 'all 1s';
 }
 
 var timer = setInterval(function() {
