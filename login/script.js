@@ -1,36 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Login</title>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-  <link rel = "stylesheet" href = "style.css">
-</head>
-<body>
-  <div class = "login-container">
-    <div class="box">
-    <div id= "main">
-      <h1>Sign In</h1>
-      <input id = "email" type = "email" placeholder = "Email"></input>
-      <input id = "password" type = "password" placeholder = "Password"></input>
-      <button id = "submit">Submit</button>
-      <p><span>or</span></p>
-      <button id = "sign-up">Sign Up</button>
-    </div>
-
-    <div id = "create-acct">
-      <h1>Create an Account</h1>
-      <input id = "email-signup" type = "email" placeholder = "Email *"></input>
-  <input id = "confirm-email-signup" type = "email" placeholder = "Confirm Email *"></input>
-      <input id = "password-signup" type = "password" placeholder = "Password *"></input>
-      <input id = "confirm-password-signup" type = "password" placeholder = "Confirm Password *"></input>
-      <button id = "create-acct-btn">Create Account</button>
-      <button id = "return-btn">Return to Login</button>
-    </div></div>
-  </div>
-  <script>
-    // Firebase configuration
+// Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDaVIJxHPHkiLLY8qw8cp2KxGBH1Mv0jn0",
   authDomain: "pinturas-e-artesanatos-gl.firebaseapp.com",
@@ -129,7 +97,3 @@ returnBtn.addEventListener("click", function() {
   main.style.display = "block";
   createacct.style.display = "none";
 });
-
-  </script>
-</body>
-</html>

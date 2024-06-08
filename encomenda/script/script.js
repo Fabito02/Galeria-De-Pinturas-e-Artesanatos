@@ -94,39 +94,59 @@ function toggleSocial() {
   }
 
 
-  // Configuração do Firebase
+  // Configuração do Firebase<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "SUA_API_KEY",
-  authDomain: "gleicianelima-6ec50.firebaseapp.com",
-  databaseURL: "https://gleicianelima-6ec50-default-rtdb.firebaseio.com", // URL do Realtime Database
-  projectId: "gleicianelima-6ec50",
-  storageBucket: "gleicianelima-6ec50.appspot.com",
-  messagingSenderId: "719666520846",
-  appId: "1:719666520846:web:9d207b947e6d4585a7ad5f",
-  measurementId: "G-VQZS6N0Q51"
+  apiKey: "AIzaSyDaVIJxHPHkiLLY8qw8cp2KxGBH1Mv0jn0",
+  authDomain: "pinturas-e-artesanatos-gl.firebaseapp.com",
+  databaseURL: "https://pinturas-e-artesanatos-gl-default-rtdb.firebaseio.com",
+  projectId: "pinturas-e-artesanatos-gl",
+  storageBucket: "pinturas-e-artesanatos-gl.appspot.com",
+  messagingSenderId: "817700092735",
+  appId: "1:817700092735:web:91076dbdca2010b8f6b18a",
+  measurementId: "G-BZLN1EJXLL"
 };
 
-// Inicializa o Firebase
-firebase.initializeApp(firebaseConfig);
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 
-// Função para adicionar dados ao Realtime Database
-function teste() {
-  const ref = firebase.database().ref('sla/'); // Substitua pelo caminho correto
 
-  ref.set({
-    arquivo1: {
-      nome: 'arquivo1.txt',
-      conteudo: 'Conteúdo do arquivo 1'
-    },
-    arquivo2: {
-      nome: 'arquivo2.txt',
-      conteudo: 'Conteúdo do arquivo 2'
-    }
-  })
-  .then(() => {
-    console.log('Dados adicionados com sucesso');
-  })
-  .catch(error => {
-    console.error('Erro ao adicionar dados:', error);
-  });
-}
+  
+  // Função para registrar um usuário
+  function registrar(email, password) {
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      console.log("Usuário registrado:", userCredential.user);
+    })
+    .catch((error) => {
+      console.error("Erro ao registrar:", error);
+    });
+  }
+
+  // Função para fazer login de um usuário
+  function login(email, password) {
+    firebase.auth().signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      console.log("Usuário logado:", userCredential.user);
+    })
+    .catch((error) => {
+      console.error("Erro ao fazer login:", error);
+    });
+  }
+
+  // Função para fazer logout
+  function logout() {
+    firebase.auth().signOut().then(() => {
+      console.log("Usuário deslogado");
+    }).catch((error) => {
+      console.error("Erro ao fazer logout:", error);
+    });
+  }
