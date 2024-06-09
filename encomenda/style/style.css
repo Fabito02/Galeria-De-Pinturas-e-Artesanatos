@@ -3,6 +3,7 @@ body {
     background-color: #fff8f4;
     color: #53392a;
   }
+
 ::selection {
 background-color: rgb(216, 162, 127);
 }
