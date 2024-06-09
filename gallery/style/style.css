@@ -286,6 +286,7 @@ footer {
 
   .image {
     flex: 1 1 calc(50% - 8px); /* 2 imagens por linha */
+    transform: translateX(-7px);
   }
 }
 
