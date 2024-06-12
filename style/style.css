@@ -1,7 +1,6 @@
-/* desktop */
 body {
-  background-color: #fff8f4;
   font-family: 'Inter';
+  background-color: #fff8f4;
 }
 ::selection {
 background-color: rgb(216, 162, 127);
@@ -14,11 +13,12 @@ header {
   border-radius: 8px;
   background-color: #f3e1d0b4;
 }
+
 .botoes {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;/
+  padding: 0 20px; 
 }
 
 .botoes .texto {
@@ -37,8 +37,8 @@ header {
   font-family: 'Inter';
   font-weight: bold;
   display: flex;
-  justify-content: center;  
-  align-items: center;
+  justify-content: center;
+  align-items: center; 
   margin-left: 8px;
   width: calc(100% - 16px);
   margin-top: 10px;
@@ -47,51 +47,71 @@ header {
 }
 
 
-
 .botoes input[type="button"]:hover {
   background-color: #815c39;
   transition: all 0.5s;
 }
+
 .texto h1 {
   font-family: 'Inter';
   font-size: 36px;
   color: #8a604b;
   font-style: initial;
   text-align: left;
+  margin-left: 22%;
 }
-.history {
+.texto p {
+  font-family: 'Inter';
+  color: #5c5c5c;
+  font-size: 20px;
+  text-align: left;
+  margin-left: 22%;
+}
+.bio {
   background-color: rgb(241, 213, 179);
   border-radius: 8px;
-  padding-top: 2px;
-  padding-right: 25px;
-  padding-bottom: 30px;
+  padding: 2px;
   margin: auto auto;
-  min-width: 90%;
-  max-width: 90%;
+  max-width: 1100px;
   height: 100%;
   justify-content: center;
 }
-.historyTitle {
+.miniBio {
+  font-size: 15.5px;
   font-family: 'Inter';
-  font-weight: bold;
-  text-align: left;
-  margin-left: 30px;
-  font-size: 23px;
-  color: #4b352a;
-  margin-top: 40px;
-}
-.text {
-  font-size: 16px;
-  font-family: '''';
   margin-left: 30px;
   margin-right: 55px;
   color: #16100c;
+  text-align: left;
 }
-/* fim desktop */
+.miniBio .selfie img {
+  max-width: 190px;
+  border-radius: 8px;
+  justify-content: right;
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
 
-
-
-
+.miniBio .quadro img {
+  max-width: 250px;
+  border-radius: 8px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.bioTitle {
+  font-weight: bold;
+  text-align: left;
+  margin-left: 30px;
+  font-size: 28px;
+  color: #4b352a;
+  margin-top: 40px;
+}
+footer {
+  border-radius: 8px;
+  padding: 2px;
+}
 .botoes img {
   max-width: 150px;
   max-height:150px;
@@ -100,6 +120,58 @@ header {
 }
 
 
+/*banner slider*/
+.slider {
+  width: 730px;
+  height: 290px;
+  position: relative;
+  transition: all 0,5s;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider img {
+  width: 730px;
+  height: 290px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.slider img:first-child {
+  z-index: 0;
+}
+
+.slider img:nth-child(2) {
+  z-index: 0;
+}
+/* botões slider*/
+
+
+.navigation-button {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px; 
+  margin-left: 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.active,
+.dot:hover {
+  background-color: #717171;
+}
 
 .menu {
   margin-right: 20px;
@@ -129,7 +201,6 @@ header {
 .menu.active .barrinha-menu:nth-child(3) {
   width: 32px;
 }
-
 
 
 /* dropdown */
@@ -168,7 +239,6 @@ header {
   background-color: #d3b188;
   transition: all 0.5s;
 }
-
 .dropdown ul {
   color: rgb(0, 0, 0);
   padding: 12px 16px;
@@ -213,189 +283,41 @@ footer {
   margin-top: 10px;
 }
 
-img {
-  float: calc(top - 1000);
-  margin-bottom: 5px;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  transition: transform 0.3s, filter 0.3s;
-  border-radius: 16px;
-  margin: 7px;
-}
-
-.image {
-  transform: translateX(-7px);
-  border-radius: 16px;
-  transition: opacity 0.3s ease;
-  max-width: 30%;
-  max-height: 10%;
-  display: flex;
-  justify-content: center;
-  margin: 5px;
-}
-
-.overlay {
-position: absolute;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-background-color: rgba(19, 19, 19, 0);
-visibility: hidden;
-opacity: 0;
-transition: visibility 0s, opacity 0.5s linear;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-.gallery {
-  display: ruby;
-  flex-wrap: wrap;
-  justify-content: center;
-  border-radius: 8px;
-  margin-right: auto;
-}
-.image:hover img {
-filter: brightness(60%) blur(3px);
-}
-
-.image:hover .overlay {
-visibility: visible;
-opacity: 1;
-}
-
-.text {
-font-size: 16px;
-text-align: center;
-color: rgb(243, 243, 243);
-margin: 0 auto;
-max-width: 85%; /* Defina a largura máxima */
-word-wrap: break-word; /* Quebra de linha */
-}
-
-
-
 @media (max-width: 720px) {
-  
-  img {
-    margin-bottom: 20px; /* Reduzir o espaçamento entre as imagens */
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    transition: transform 0.3s, filter 0.3s;
-    border-radius: 16px;
-  }
-
-  .image {
-    flex: 1 1 calc(50% - 8px); /* 2 imagens por linha */
-    transform: translateX(-7px);
-    position: relative;
-    overflow: hidden;
-    border-radius: 16px;
-    transition: opacity 0.3s ease-in-out;
-    max-width: max-content;
-    max-height: min-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(19, 19, 19, 0);
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px; 
-  border-radius: 8px; 
-  margin-right: auto;
-}
-.image:hover img {
-  filter: brightness(60%) blur(3px);
-}
-
-.image:hover .overlay {
-  visibility: visible;
-  opacity: 1;
-}
-
-.text {
-  font-size: 16px;
-  text-align: center;
-  color: rgb(243, 243, 243);
-  margin: 0 auto;
-  max-width: 85%; /* Defina a largura máxima */
-  word-wrap: break-word; /* Quebra de linha */
-}
-}
-
-
-@media (max-width: 480px) {
-  .image {
-    flex: 1 1 calc(100% - 16px); /* 1 imagem por linha */
-  }
-  
-
   .botoes {
       flex-direction: column;
-      align-items: center;
   }
-
   .botoes .texto {
       margin-left: 16px;
       margin-bottom: 10px;
   }
-
-  .history {
+  .bio {
       min-width: 90%;
       max-width: 90%;
       padding: 10px;
   }
-
-  .text {
+  .miniBio {
       margin-left: 16px;
       margin-right: 16px;
+      font-size: 14px;
+      align-items: center;
   }
-
-  .historyTitle {
+  .bioTitle {
       margin-left: 16px;
-      margin-bottom: 400px;
   }
-
   .texto h1 {
       font-size: 24px;
       text-align: left;
       margin-left: 1%;
   }
-
   .texto p {
       font-size: 16px;
       text-align: left;
       margin-left: 1%;
-      max-width: 270px;
-      max-height: 270px;
   }
   .botoes img {
     margin-left: 0%;
   }
-
   .menu {
     margin-bottom: 15px; 
     margin-right: auto;
@@ -421,8 +343,48 @@ word-wrap: break-word; /* Quebra de linha */
     opacity: 1;
     transform: translateY(0);
   }
-  .botoes input[type="button"] {
-    text-align: center;
+  .slider {
+    width: 300px;
+    height: 150px;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out, visibility 0.15s;
+  }
+  .slider img {
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .dot {
+    cursor: pointer;
+    height: 7px;
+    width: 7px; 
+    margin-left: 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .miniBio .selfie img {
+    max-width: 130px;
+    border-radius: 8px;
+    justify-content: right;
+    float: right;
+    margin-left: 20px;
+  }
+  .miniBio .quadro {
+    align-items: center;
+  }
+  .miniBio .quadro img {
+    padding: auto;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 15px;
   }
 }
-/*fim do mobile*/

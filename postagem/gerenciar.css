@@ -1,0 +1,128 @@
+body {
+    font-family: 'Inter';
+    background-color: #fff8f4;
+    color: #53392a;
+  }
+  h1 {
+    text-align: center;
+  }
+.gallery{
+    margin-left: 40px;
+}
+header {
+    height: 90px;
+    margin-top: 30px;
+    background-color: rgba(207, 153, 70, 0.363);
+    padding: 10px;
+    border-radius: 8px;
+}
+footer {
+    height: 80px;
+}
+img {
+    max-width: 230px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+.bt {
+    float: right;
+    margin-top: 20px;
+  }
+  
+  input[type="button"] {
+    margin-top: 60px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+.botao {
+  background-color: #af7c4c;
+  font-weight: bold;
+  width: auto;
+  height: 25px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 14px;
+  transition: background-color 0.2s, color 0.2s;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+input[type="button"] {
+  background-color: #af874c;
+  font-weight: bold;
+  width: auto;
+  height: 25px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 14px;
+  transition: background-color 0.2s, color 0.2s;
+  margin-top: 10px;
+}
+
+input[type="button"]:hover {
+    background-color: #816439;
+  }
+button:hover:hover {
+  background-color: #815c39;
+}
+h4 {
+    background-color: rgb(241, 213, 179);
+    padding: 5px;
+    border-radius: 5px;
+    width:max-content ;
+    max-width: 400px;
+}
+
+@media (max-width: 720px) {
+    h1 {
+      font-size: 28px;
+      text-align: center;
+    }
+    .box {
+      max-width: 75%;
+    }
+    header {
+        height: 90px;
+        margin-top: 30px;
+        background-color: rgba(207, 153, 70, 0.363);
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+h4 {
+    max-width: 230px;
+}
+.gallery{
+    margin-left: unset;
+}
+.bt {
+    display: flex;
+    width: 100%;
+    flex-direction: unset;
+    align-items: unset;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  button {
+    margin-left: 17.5%;
+}
+  h4 {
+      background-color: rgb(241, 213, 179);
+      padding: 5px;
+      border-radius: 5px;
+      width:max-content ;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  img {
+    max-width: 230px;
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+  }

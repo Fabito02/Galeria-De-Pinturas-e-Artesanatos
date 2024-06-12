@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encomende Um Produto</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png">
+</head>
+<body>
+  <header>
+    <div class="botoes">
+      <img src="../img/logo.png" alt="Imagem 1" onclick="window.location.href='../index.html'">
+      <div class="texto"></div>
+      <div class="menu" id="menu" onclick="animacaoDoMenu()">
+        <span class="barrinha-menu"></span>
+        <span class="barrinha-menu"></span>
+        <span class="barrinha-menu"></span>
+      </div>
+      <div class="dropdown" id="dropdown"> 
+        <input type="button" value="Minha Galeria de Arte" onclick="window.location.href='../gallery/gallery.html'">
+        <a href="../index.html">Página inicial</a>
+        <a href="encomenda.html">Faça Uma Encomenda</a>
+        <a onclick="mostrarRedesSociais()" id="setaAnimada">Redes Sociais <div class="arrow-down" style="display: inline-block;"></div></a>
+        <div id="social" style="display: none;" class="toggle-button">
+          <ul>
+            <li><a href="https://www.facebook.com/share/M3rtkJkxFXiuwMPU/?mibextid=qi2Omg" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com/gleiciane_lima_pinturas?igsh=MWM1Nm4zaGptM2V3YQ==" target="_blank">Instagram</a></li>
+            <li><a href="https://www.kwai.com/@vivendoarteecomtdh" target="_blank">Kwai</a></li>
+          </ul>
+        </div>
+        <a href="../jequitinhonha/jequi.html">Vale do Jequitinhonha</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="form">
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <h1>FAÇA UMA ENCOMENDA</h1><br>
+        <h5>"*" indica algo obrigatório</h5>
+        <h2>Descreva o seu pedido</h2>
+        <b>*Descrição: </b><br><br>
+        <textarea id="descricao" name="text" rows="8" cols="30" placeholder="Descreva como deseja sua encomenda... (Até 1000 caracteres)" required maxlength="1000"></textarea><br><br>
+        <h2>Escreva seus contatos</h2><br>
+        <b>*Nome: </b><br><input type="text" placeholder="Escreva seu nome..." id="nomeCliente" required><br><br>
+        <b>*Email: </b><br><input type="email" placeholder="Escreva seu e-mail..." id="emailCliente" required><br><br>
+        <b>*Telefone: </b><br><input type="tel" placeholder="Escreva seu telefone..." id="telefoneCliente" required max=""><br><br>
+        <h2>Localidade</h2><br>
+        <b>*Cidade: </b><br><input type="text" placeholder="O nome da sua cidade..." id="cidadeCliente" required><br><br>
+        <b>*Bairro: </b><br><input type="text" placeholder="O nome do seu bairro..." id="bairroCliente" required><br><br>
+        <b>*Rua: </b><br><input type="text" placeholder="Sua rua..." id="ruaCliente"><br><br>
+        <b>*Número da Casa: </b><br><input type="number" placeholder="O número da sua casa..." id="casaCliente"><br><br>
+        <h2>Imagem de referência </h2>
+        <h5>(Caso julgue necessário o envio de uma imagem, coloque o seu link do Google Drive, Google Fotos, ou qualquer outra plataforma que prefira, no campo abaixo. Devido a problemas de compatibilidade não é possível anexar arquivos diretamente.)</h5>
+        <b>Link (Envio Recomendado): </b>
+        <input type="text" placeholder="Digite o Link aqui..." id="link"><br><br>
+        <input type="button" value="Enviar Pedido" onclick="enviarPedido()" id="botaoEnviar">
+      </form>
+    </div>
+    <footer></footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="script/script.js"></script>
+</body>
+</html>

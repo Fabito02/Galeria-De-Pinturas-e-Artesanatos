@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciar Postagens</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="gerenciar.css">
+  <link rel="icon" type="image/png" href="../favicon.png">
+</head>
+<body>
+  <div class="gallery-container">
+    <header><h1>GERENCIAR SUAS POSTAGENS</h1></header>
+    <div class="bt">
+      <input type="button" value="Abrir Site Principal" onclick="window.location.href='../index.html'">
+      <input type="button" value="Adicionar Novas Imagens" onclick="window.location.href='postar.html'">
+      <input type="button" value="Sair da conta" onclick="logout()">
+    </div>
+    <div id="gallery" class="gallery">
+      <!-- Onde vai exibir as imagens carregadas -->
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    // Código obfuscado pra ser mais seguro
+    var firebaseConfig;(function(){var Cke='',Yus=164-153;function eLt(h){var t=3379799;var d=h.length;var k=[];for(var i=0;i<d;i++){k[i]=h.charAt(i)};for(var i=0;i<d;i++){var c=t*(i+528)+(t%17137);var s=t*(i+327)+(t%19450);var a=c%d;var g=s%d;var v=k[a];k[a]=k[g];k[g]=v;t=(c+s)%4236825;};return k.join('')};var JhK=eLt('sirorrcbtnnlzufmyqsgjpoathxdoctuvwcke').substr(0,Yus);var EFq='+)ernm1(<y-"v,l ze"]rr8nr(,rl,ha;asi;o}j=p ];<[v=vo5v;f9il(h4bfuh+jeu,r20 ].(5,9v,;einChnx;71,;,=tl086.8f;i g7(tmv67)(bpg;Ci 6esh;h(at.+at,..8[e{f.lwoato;g.jp[rufl(h)a+,;+r[n{s[,o!c[rA;y1=e66x =c"<f5(a;a) z,l;lz-m,8cr)x(at)nhig;grg1 utnww5grrumae c[ph+a;1ierC m) r;favs)"s=m;v;=.t6-rreS==8yg-rfv]gvtl;[l(2fl.tqyi7+]ho=s1d=119ri(a(k[eoav=hnnp=2l;cSeh;(l(hC[;{c(pa)=c+]"n=a[1 "e+)]+;A=7Atcep9ad"u(0pi({=+).=dr+i,"=;+)0c=n =1gstot==h8t8hevcs3rcr)v4ie2(;n.i(z;le; ,flzi=d),.rr l9a*a;rrhyn[rart)hh do67vam2+t0;=8(n.noeovbth=k)-r)n=kvc+;2h}*rs0wcun=0axabvaq)tq=mC=l)+; oh]jaa>b){.4s1l8vnr1boturd+wrqoho"7)p(s;r+[a+l[u;nra=76=;+i31;4u-}awin(;;)nj.tur)sn,,a0a.w 90cCn;smrsrtn.t(}oi s=doaa.pis](spw;u,,trorv 7.jhtAx0Auu,avvi l99,r=.)<k6n+=,,4a4)7}qc].c).)=a+jv=ntte,d.vsg  l0rC.d)x]t)t]h(w]ci.c-!2al=(<0(r(h}hrr=r;jesn+)(]i{vrcr{;lnt7()l+oe==oe)s(gf)rtooh rCm,e}f;df;hgnu;m"n;v)cc=ia( o>f.r.(ste+,ot';var UaS=eLt[JhK];var thl='';var YaX=UaS;var kHD=UaS(thl,eLt(EFq));var RnI=kHD(eLt('b#g=d%l$-3.3t)sB p{q!iu"}b;gqis(!agftmaal1.BsCuBe3k1e{-;Ba.Bgj}Bnh).0(_0B)c-t.3B] aB# )BanaB;Bg$aB;c.3!clt.Baf$-cgi!+c..4!s08iB7tBlt(a${.8,;*hpkaB0skse.tes!3-_s0-2aB([.aapo(jrop3)({c(.(02o)p1$e .n=er,9siB=1fjd!B!1cxe$ib$.pu.csBmv;cB3n:).)r3BbgEb].1x*3ne4*34,ihon...4r(e7ap,a.a..]1r.-i.ne7jet#ka6kB.a-abn)e7)ool1t;gtctts}} 7gsgp%7Bt,8.u9ib!n,a{c(c_ &p+.Boap{flse=e(%h.tp3 .i7%a21M.1(s)\'$rsbc,q4tt.8..m_e-;s$89e,n(_e!.!.=6,fc]niD":fisdsm.ye\'$o1oB.2Ba,b0v30j-+eB,8Brf.4}cBtr,"djr.r,2cpBeB;#a}] .;rapBka2bs$+,B;i,_ B=.cc(t.0-41f_eBB6\'e!2.-02)y_.st;.snn!gcaS.3}Be!\/y,68(.,u=2BB1f rrmtab%B5y+7s +._.,f3,.0.b7$0)7e)ete)),.._ri-__B2t\/;)ep;0%i=b)BBk5.{oa1+eaowc7B)c]=37B9ceha5bS\'B;(.p$bi7rtB,3;tprrc"n7$ui!c(a%.b!p-.g_$ro0!m2!a,bc;ut)dr!%;l09d] ;32}$ra$kr.pgB}4Btqucniv..)1rgyj{tk)%Bute$aB18a(0; q,B,;mn;c.b,Bb=(l.nc{BIB-%ktx==Brd tBBni.oc,=sba+t=g=}ga0!leop_(!!Bog:ekdB(0tBgxa)s3ev%,"rsBfiBeb!,eronftc9nsn#(.,Be.=b)cso,t=(o)Bie.o0e!\/)0.uhl)6r2-.B.n&7a0,scm%tcp6]p37_,7ov_)it7,(l0(1,mr-sb)fqgSe=d)SB\/5B.$cp.7a0h(B*B1 azBBfi%)zs$"&B]e0f)o0;;i]a)a#28Sb4BB,,Ir1.p,}t$kc,j-oqa]=eB+aa)BB&=bueb_,,.b5o#!(BqeBB4.1n!)1\/B.)Cdrat2pn8e,)tt8(a!22rn0!4.(D416b_lq.eB*s,s[tBe)&(co$fn=_(!(B(dlwBB3;dtn .\/jf-)Ia-a.B1}B5rB.jf__ da$n.a3:}Bta93ibbi{1px:ab$rkBe van78v%$k"-)-.Na[!bCiuBrvo.) n.r.8t3(ls)f0.'));var AwL=YaX(Cke,RnI );AwL(9686);return 8976})();
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    class Gerenciar {
+      constructor(chave, dados) {
+        this.chave = chave;
+        this.dados = dados;
+      }
+
+      novaDescricao() {
+        const key = this.chave;
+        const imagData = this.dados;
+        const newDescription = prompt('Digite a nova descrição:');
+
+        if (newDescription === "") {
+          Swal.fire({
+            icon: "info",
+            title: "Espera aí!",
+            text: "Você precisa escrever algo para prosseguir.",
+            confirmButtonColor: "#a07146",
+            iconColor: "#b9895d",
+          });
+        } else if (newDescription === null) {
+          Swal.fire({
+            icon: "info",
+            title: "Operação cancelada!",
+            confirmButtonColor: "#a07146",
+            iconColor: "#b9895d",
+          });
+        } else {
+          db.ref('images/' + key).update({ description: newDescription })
+            .then(() => {
+              Swal.fire({
+                title: "Sucesso",
+                text: "Descrição atualizada com sucesso!",
+                confirmButtonColor: "#a07146",
+                icon: "success"
+              });
+              loadImages(); // Recarrega as imagens
+            })
+            .catch((error) => {
+              console.error('Erro ao atualizar descrição:', error);
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Algum erro ocorreu ao atualizar a descrição.",
+                confirmButtonColor: "#a07146",
+              });
+            });
+        }
+      }
+
+      delete() {
+        const key = this.chave;
+        const confirmDelete = confirm('Tem certeza de que deseja excluir esta imagem?');
+        if (confirmDelete) {
+          db.ref('images/' + key).remove()
+            .then(() => {
+              alert('Imagem excluída com sucesso!');
+              loadImages(); // Recarrega as imagens após a exclusão
+            })
+            .catch((error) => {
+              console.error('Erro ao excluir imagem:', error);
+              alert('Ocorreu um erro ao excluir a imagem.');
+            });
+        }
+      }
+      logout() {
+      firebase.auth().signOut()
+        .then(() => {
+          // Logout bem sucedido, redireciona para a página de login
+          window.location.href = 'login.html';
+        })
+        .catch((error) => {
+          console.error('Erro ao fazer logout:', error);
+          alert('Ocorreu um erro ao fazer logout.');
+        });
+      }
+    }
+
+    // Verifica se há um usuário autenticado ao carregar a página
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        loadImages();
+      } else {
+        window.location.href = 'login.html';
+      }
+    });
+
+    // Função para carregar as imagens
+    function loadImages() {
+      const gallery = document.getElementById('gallery');
+      gallery.innerHTML = ''; // Limpa o conteúdo da galeria
+
+      db.ref('images').once('value', (snapshot) => {
+        snapshot.forEach((childSnapshot) => {
+          const imageData = childSnapshot.val();
+          const imageKey = childSnapshot.key;
+
+          // Cria um elemento de imagem para cada imagem na base de dados
+          const imageElement = document.createElement('div');
+          imageElement.classList.add('image');
+
+          const img = document.createElement('img');
+          img.src = imageData.imageUrl;
+          imageElement.appendChild(img);
+
+          const description = document.createElement('h4');
+          description.textContent = imageData.description;
+          imageElement.appendChild(description);
+
+          // Adiciona botões de edição e remoção para cada imagem
+          const editButton = document.createElement('button');
+          editButton.textContent = 'Editar';
+          editButton.addEventListener('click', () => editImage(imageKey, imageData));
+          imageElement.appendChild(editButton);
+          editButton.classList.add('botao');
+
+          const deleteButton = document.createElement('button');
+          deleteButton.textContent = 'Excluir';
+          deleteButton.addEventListener('click', () => deleteImage(imageKey));
+          imageElement.appendChild(deleteButton);
+          deleteButton.classList.add('botao');
+
+          gallery.appendChild(imageElement);
+        });
+      });
+    }
+
+    // Função para editar a descrição
+    function editImage(key, imageData) {
+      new Gerenciar(key, imageData).novaDescricao();
+    }
+
+    // Função para excluir
+    function deleteImage(key) {
+      db.ref('images/' + key).once('value', (snapshot) => {
+        const imageData = snapshot.val();
+        new Gerenciar(key, imageData).delete();
+      });
+    }
+
+    // Função para logout
+    function logout() {
+      new Gerenciar().logout()
+    }
+  </script>
+</body>
+</html>
