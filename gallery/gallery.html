@@ -59,43 +59,44 @@
     firebase.initializeApp(firebaseConfig);
     const db = firebase.database();
 
-  // Função para carregar as imagens da base de dados
-  function loadImages() {
-    const gallery = document.getElementById('gallery');
-    gallery.innerHTML = ''; // Limpa o conteúdo da galeria antes de adicionar novas imagens
+// Função para carregar as imagens da base de dados
+function loadImages() {
+  const gallery = document.getElementById('gallery');
+  gallery.innerHTML = ''; // Limpa o conteúdo da galeria antes de adicionar novas imagens
 
-    db.ref('images').once('value', (snapshot) => {
-      snapshot.forEach((childSnapshot) => {
-        const imageData = childSnapshot.val();
-        const imageKey = childSnapshot.key;
+  db.ref('images').once('value', (snapshot) => {
+    snapshot.forEach((childSnapshot) => {
+      const imageData = childSnapshot.val();
+      const imageKey = childSnapshot.key;
 
-        // Cria um elemento de imagem para cada imagem na base de dados
-        const imageElement = document.createElement('div');
-        imageElement.classList.add('image');
+      // Cria um elemento de imagem para cada imagem na base de dados
+      const imageElement = document.createElement('div');
+      imageElement.classList.add('image');
 
-        const img = document.createElement('img');
-        img.src = imageData.imageUrl;
-        imageElement.appendChild(img);
-        img.classList.add('img');
+      const img = document.createElement('img');
+      img.src = imageData.imageUrl;
+      img.alt = imageData.description; // Adiciona um atributo alt para acessibilidade
+      img.addEventListener('click', () => openModal(imageData.imageUrl));
+      imageElement.appendChild(img);
 
-        const overlay = document.createElement('div');
-        overlay.classList.add('overlay');
+      const overlay = document.createElement('div');
+      overlay.classList.add('overlay');
 
-        const text = document.createElement('div');
-        text.classList.add('text');
-        text.textContent = imageData.description;
+      const text = document.createElement('div');
+      text.classList.add('text');
+      text.textContent = imageData.description;
 
-        overlay.appendChild(text);
-        imageElement.appendChild(overlay);
+      overlay.appendChild(text);
+      imageElement.appendChild(overlay);
 
-        // Adiciona o elemento de imagem à galeria
-        gallery.appendChild(imageElement);
-      });
+      // Adiciona o elemento de imagem à galeria
+      gallery.appendChild(imageElement);
     });
-  }
+  });
+}
 
-  // Chama a função para carregar as imagens quando a página é carregada
-  window.onload = loadImages;
+// Chama a função para carregar as imagens quando a página é carregada
+window.onload = loadImages;
 </script>
 <script src="../script/script.js"></script>
 <script src="desktopGallery.js"></script>

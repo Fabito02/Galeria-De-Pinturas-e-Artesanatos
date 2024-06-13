@@ -72,6 +72,7 @@ h4 {
     border-radius: 5px;
     width:max-content ;
     max-width: 400px;
+    word-wrap: break-word; /* Quebra de linha */
 }
 
 @media (max-width: 720px) {
@@ -103,13 +104,26 @@ h4 {
     align-items: unset;
     margin-top: 20px;
     margin-bottom: 50px;
+    display: grid;
+    place-items: center;
+  }
+  body {
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+  }
+  .botao {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
   }
   button {
-    margin-left: 17.5%;
+            margin: 0 7.5px;
+  }
 }
   h4 {
       background-color: rgb(241, 213, 179);
-      padding: 5px;
+      padding: 10px;
       border-radius: 5px;
       width:max-content ;
       display: block;
@@ -124,5 +138,3 @@ h4 {
     margin-right: auto;
   }
   
-
-  }
