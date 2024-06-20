@@ -165,7 +165,7 @@ h1 {
   margin-top: 370px;
   border-radius: 8px;
   transform: translateY(-10px);
-  transition: opacity 0.20s ease-in-out, transform 0.20s ease-in-out, visibility 0.20s, color 0,20s;
+  transition: opacity 0.20s ease-in-out, transform 0.20s ease-in-out, visibility 0.20s;
 }
 
 .menu.active + .dropdown {
@@ -210,6 +210,7 @@ h1 {
   padding: unset;
   height: auto;
   vertical-align: middle;
+  transition: color 0.2s;
 }
 .dropdown ul a svg, .dropdown ul a img {
   display: inline;
@@ -261,7 +262,19 @@ footer {
   margin-top: 10px;
 }
 
+.kwaiIcon img{
+  margin: -5px;
+}
+
 @media (max-width: 720px) {
+  .kwaiIcon img {
+    margin: 5px;
+    transform: translateX(5px);
+}
+.kwaiIcon .kwaiText {
+  transform: translateX(5px);
+}
+
   header {
       height: auto;
   }
