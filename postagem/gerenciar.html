@@ -17,7 +17,7 @@
       <input type="button" value="Sair da conta" onclick="logout()">
     </div>
     <div id="gallery" class="gallery">
-      <!-- Onde vai exibir as imagens carregadas -->
+      <!-- Onde vai exibir as imagens -->
     </div>
   </div>
   <footer></footer>
@@ -161,12 +161,12 @@
       });
     }
 
-    // Função para editar a descrição
+    // Função pra editar a descrição
     function editImage(key, imageData) {
       new Gerenciar(key, imageData).novaDescricao();
     }
 
-    // Função para excluir
+    // Função pra excluir
     function deleteImage(key) {
       db.ref('images/' + key).once('value', (snapshot) => {
         const imageData = snapshot.val();
@@ -174,7 +174,7 @@
       });
     }
 
-    // Função para logout
+    // Função pra logout
     function logout() {
       new Gerenciar().logout()
     }

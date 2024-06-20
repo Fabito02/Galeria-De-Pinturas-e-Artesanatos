@@ -1,6 +1,7 @@
 body {
   font-family: 'Inter';
   background-color: #fff8f4;
+  margin: 0;
 }
 ::selection {
 background-color: rgb(216, 162, 127);
@@ -8,9 +9,10 @@ background-color: rgb(216, 162, 127);
 header {
   padding: 10px 0;
   text-align: center;
+  height: 63px;
   font-family: 'Inter';
+  align-items: center;
   border-color: #8a604b;
-  border-radius: 8px;
   background-color: #f3e1d0b4;
 }
 
@@ -46,7 +48,18 @@ header {
   transition: all 0.5s;
 }
 
-
+h1 {
+  color: #765443;
+  font-size: 27px;
+}
+h2 {
+  color: #5d684e;
+  font-size: 20px;
+  margin-left: 20px;
+}
+.item-list {
+  margin-left: 40px;
+}
 .botoes input[type="button"]:hover {
   background-color: #815c39;
   transition: all 0.5s;
@@ -70,7 +83,7 @@ header {
 .bio {
   background-color: rgb(241, 213, 179);
   border-radius: 8px;
-  padding: 2px;
+  padding: 10px;
   margin: auto auto;
   max-width: 1100px;
   height: 100%;
@@ -83,29 +96,39 @@ header {
   margin-right: 55px;
   color: #16100c;
   text-align: left;
+  text-align: justify;
 }
 .miniBio .selfie img {
   max-width: 190px;
   border-radius: 8px;
-  justify-content: right;
   float: right;
-  margin-left: 20px;
+  margin: 0px 0px 30px 30px;
   margin-bottom: 10px;
 }
 
-.miniBio .quadro img {
-  max-width: 250px;
+.miniBio .proposito img {
+  max-width: 200px;
   border-radius: 8px;
   float: left;
-  margin-right: 20px;
-  margin-bottom: 10px;
+  margin: 0px 30px 30px 0px;
+}
+.miniBio .experiencia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.miniBio .experiencia img {
+  max-width: 600px;
+  border-radius: 8px;
+  margin-top: 40px;
+  margin: 40px 30px 30px 30px;
 }
 .bioTitle {
   font-weight: bold;
   text-align: left;
   margin-left: 30px;
-  font-size: 28px;
-  color: #4b352a;
+  font-size: 36px;
+  color: #6d7f53;
   margin-top: 40px;
 }
 footer {
@@ -117,6 +140,7 @@ footer {
   max-height:150px;
   position: relative;
   margin-left: 2%;
+  padding: 10px;
 }
 
 
@@ -203,6 +227,7 @@ footer {
 }
 
 
+
 /* dropdown */
 .dropdown {
   visibility: hidden;
@@ -215,7 +240,7 @@ footer {
   margin-top: 370px;
   border-radius: 8px;
   transform: translateY(-10px);
-  transition: opacity 0.20s ease-in-out, transform 0.20s ease-in-out, visibility 0.20s;
+  transition: opacity 0.20s ease-in-out, transform 0.20s ease-in-out, visibility 0.20s, color 0,20s;
 }
 
 .menu.active + .dropdown {
@@ -239,6 +264,7 @@ footer {
   background-color: #d3b188;
   transition: all 0.5s;
 }
+
 .dropdown ul {
   color: rgb(0, 0, 0);
   padding: 12px 16px;
@@ -249,14 +275,30 @@ footer {
   margin: 8px;
   list-style-type: none; /* Remove os pontos */
 }
-
+.dropdown ul a span {
+  margin-left: 12px;
+}
 .dropdown ul a {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
   background-color: #f3e1d0;
+  padding: unset;
+  height: auto;
+  vertical-align: middle;
+}
+.dropdown ul a svg, .dropdown ul a img {
+  display: inline;
+  justify-content: flex-start;
+  vertical-align: middle;
 }
 
 .dropdown ul a:hover {
   background-color: #a58662;
 }
+.dropdown ul a:hover span {
+  color: white;
+}
+
 
 
 /*setinha*/
@@ -284,6 +326,22 @@ footer {
 }
 
 @media (max-width: 720px) {
+  .miniBio .experiencia img {
+  max-width: 260px;
+  border-radius: 8px;
+  margin-top: 40px;
+  margin: 40px 30px 30px 30px;
+}
+  .miniBio .proposito {
+    display: flex;
+    float: unset;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  header {
+      height: auto;
+  }
   .botoes {
       flex-direction: column;
   }
@@ -292,8 +350,8 @@ footer {
       margin-bottom: 10px;
   }
   .bio {
-      min-width: 90%;
-      max-width: 90%;
+      min-width: 87%;
+      max-width: 87%;
       padding: 10px;
   }
   .miniBio {
@@ -317,6 +375,7 @@ footer {
   }
   .botoes img {
     margin-left: 0%;
+    padding: 0;
   }
   .menu {
     margin-bottom: 15px; 

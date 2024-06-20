@@ -32,7 +32,7 @@ class Social {
       if (isMobile) {
           this.drop.style.marginTop = "255px"
       } else {
-          this.drop.style.marginTop = "566px"
+          this.drop.style.marginTop = "555px"
       }
   } else {
       this.list.style.display = "none"

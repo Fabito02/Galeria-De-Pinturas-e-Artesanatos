@@ -2,6 +2,7 @@ body {
     font-family: 'Inter';
     background-color: #fff8f4;
     color: #53392a;
+    margin: 0;
   }
   h1 {
     text-align: center;
@@ -14,7 +15,6 @@ header {
     margin-top: 30px;
     background-color: rgba(207, 153, 70, 0.363);
     padding: 10px;
-    border-radius: 8px;
 }
 footer {
     height: 80px;
