@@ -89,7 +89,6 @@ header {
   margin-right: 55px;
   color: #16100c;
 }
-/* fim desktop */
 
 
 
@@ -246,7 +245,7 @@ header {
 }
 
 #setaAnimada.active .arrow-down {
-  transform: rotate(180deg); /* rotação quando #setaAnimada tá ativo */
+  transform: rotate(180deg);
 }
 footer {
   max-width: 100%;
@@ -269,7 +268,7 @@ footer {
   overflow: hidden;
   position: relative;
   margin: 5px;
-  border-radius: 8px;
+  border-radius: 16px;
 }
 
 .overlay {
@@ -328,42 +327,34 @@ footer {
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.9);
-}
-
-.modal-conteudo {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  max-width: 700px;
-  height: 80%;
-  max-height: 80%;
+  z-index: 1000;
 }
 
 .fechar {
   color: #aaa;
   float: right;
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
   margin-right: 25px;
   margin-right: 25px;
 }
+.modal-conteudo {
+  min-height: 500px;
+  max-height: 80%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
-.fechar:hover,
-.fechar:focus {
+.fechar:hover, .fechar:focus {
   color: #fff;
   text-decoration: none;
   cursor: pointer;
 }
 img {
   border-radius: 12px;
-}
-.modal-conteudo{
-  max-width: 500px;
-  max-height: 800px;
-  
-}
+} 
 
 .kwaiIcon img{
   margin: -5px;
@@ -371,40 +362,37 @@ img {
 
 @media (max-width: 720px) {
   .kwaiIcon img {
+    border-radius: unset;
     margin: 5px;
+    width: 30px;
     transform: translateX(5px);
 }
 .kwaiIcon .kwaiText {
   transform: translateX(5px);
 }
-
   header {
       height: auto;
   }
-  img {
-    margin-bottom: 20px;
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    transition: transform 0.3s, filter 0.3s;
-    border-radius: 16px;
-  }
-
   .image {
-    flex: 1 1 calc(50% - 8px);
-    transform: translateX(-7px);
     position: relative;
-    overflow: hidden;
     border-radius: 16px;
     transition: opacity 0.3s ease-in-out;
-    max-width: max-content;
-    max-height: min-content;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: auto;
+    height: auto;
+    transform: translateX(-7px);
   }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+    object-fit: unset;
+    border-radius: 16px;
+    transition: filter 0.3s, transform 0.3s;
+  }
+  
 
   .overlay {
     position: absolute;
@@ -420,21 +408,22 @@ img {
     justify-content: center;
     align-items: center;
     border-radius: 16px;
-  }
+  }  
 
   .gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px; 
+    padding: 0;
     border-radius: 8px; 
     margin-right: auto;
   }
 
   .image:hover img {
     filter: brightness(40%) blur(3px);
-    transform: scale(125%);
-  }
+    transform: scale(120%);
+  }  
 
   .image:hover .overlay {
     visibility: visible;
@@ -518,7 +507,7 @@ img {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
     z-index: 1000; /* Garantir que esteja acima de outros elementos */
     border-radius: 8px;
-    margin-top: 255px;
+    margin-top: 230px;
     transform: translateY(-10px); /* Animação */
     transition: opacity 0.20s ease-in-out, transform 0.20s ease-in-out, visibility 0.20s;
   }

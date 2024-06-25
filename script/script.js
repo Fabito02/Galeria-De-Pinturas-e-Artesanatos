@@ -31,14 +31,14 @@ class Social {
     if (this.list.style.display === "none" || this.list.style.display === "") {
         this.list.style.display = "block"
         if (isMobile) {
-            this.drop.style.marginTop = "255px"
+            this.drop.style.marginTop = "230px"
         } else {
             this.drop.style.marginTop = "555px"
         }
     } else {
         this.list.style.display = "none"
         if (isMobile) {
-            this.drop.style.marginTop = "255px"
+            this.drop.style.marginTop = "230px"
         } else {
             this.drop.style.marginTop = "370px"
         }

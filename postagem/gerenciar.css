@@ -1,39 +1,75 @@
 body {
-    font-family: 'Inter';
-    background-color: #fff8f4;
-    color: #53392a;
-    margin: 0;
-  }
-  h1 {
-    text-align: center;
-  }
-.gallery{
-    margin-left: 40px;
+  font-family: 'Inter';
+  background-color: #fff8f4;
+  color: #53392a;
+  margin: 0;
 }
+
+h1 {
+  text-align: center;
+}
+
+.gallery {
+  margin-top: 120px;  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  background-color: #f0dcbd;
+  padding: 16px;
+  border-radius: 12px;
+  margin: 35px;
+  display: flex;
+  flex-direction: column; /* Organiza os elementos verticalmente */
+  align-items: center; /* Centraliza os elementos horizontalmente */
+}
+
 header {
-    height: 90px;
-    margin-top: 30px;
-    background-color: rgba(207, 153, 70, 0.363);
-    padding: 10px;
+  height: 90px;
+  background-color: rgba(207, 153, 70, 0.363);
+  padding: 10px;
 }
+
 footer {
-    height: 80px;
+  height: 80px;
 }
+
 img {
-    max-width: 230px;
-    border-radius: 8px;
-    margin-top: 30px;
+  width: 250px;
+  border-radius: 8px;
+  margin-top: 30px;
 }
+
 .bt {
-    float: right;
-    margin-top: 20px;
-  }
-  
-  input[type="button"] {
-    margin-top: 60px;
-    font-size: 16px;
-    cursor: pointer;
-  }
+  float: right;
+  margin-top: 20px;
+  margin-right: 40px;
+}
+
+input[type="button"] {
+  margin-top: 60px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type="button"] {
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #889f6b;
+  font-weight: bold;
+  width: auto;
+  height: 25px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 14px;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 10px;
+}
+
 .botao {
   background-color: #af7c4c;
   font-weight: bold;
@@ -43,98 +79,87 @@ img {
   border: none;
   border-radius: 5px;
   padding: 3px 14px;
-  transition: background-color 0.2s, color 0.2s;
-  margin-right: 10px;
-  margin-top: 10px;
-}
-input[type="button"] {
-  background-color: #af874c;
-  font-weight: bold;
-  width: auto;
-  height: 25px;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 3px 14px;
-  transition: background-color 0.2s, color 0.2s;
+  margin: 0 7.5px 0 7.5px;
+  transition: background-color 0.3s, color 0.3s;
   margin-top: 10px;
 }
 
 input[type="button"]:hover {
-    background-color: #816439;
-  }
-button:hover:hover {
+  background-color: #576544;
+}
+
+button:hover {
   background-color: #815c39;
 }
+
 h4 {
-    background-color: rgb(241, 213, 179);
-    padding: 5px;
-    border-radius: 5px;
-    width:max-content ;
-    max-width: 400px;
-    word-wrap: break-word; /* Quebra de linha */
+  background-color: rgb(230, 234, 208);
+  padding: 5px;
+  border-radius: 5px;
+  width: max-content;
+  max-width: 200px;
+  word-wrap: break-word;
 }
 
 @media (max-width: 720px) {
-    h1 {
-      font-size: 28px;
-      text-align: center;
-    }
-    .box {
-      max-width: 75%;
-    }
-    header {
-        height: 90px;
-        margin-top: 30px;
-        background-color: rgba(207, 153, 70, 0.363);
-        padding: 10px;
-        border-radius: 8px;
-    }
-
-h4 {
-    max-width: 230px;
-}
-.gallery{
-    margin-left: unset;
-}
-.bt {
+  header {
+    margin-bottom: 20px;
+    height: 90px;
+    background-color: rgba(207, 153, 70, 0.363);
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
     display: flex;
+  }
+  header h1 {
+    font-size: 28px;
+  }
+  .gallery {
+    margin-top: 0px;
+    flex-direction: column; 
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bt {
+    margin-right: 0;
     width: 100%;
-    flex-direction: unset;
-    align-items: unset;
-    margin-top: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     margin-bottom: 50px;
-    display: grid;
-    place-items: center;
   }
-  body {
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: center; /* Centraliza os itens verticalmente */
+  .bt input[type = "button"] {
+    margin: 4px;
   }
-  .botao {
+
+  .image {
+    margin: 0px;
+    margin-bottom: 30px;
+  }
+
+  h4 {
+    background-color: rgb(241, 213, 179);
+    padding: 10px;
+    border-radius: 5px;
+    width: max-content;
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
 
-  }
-  button {
-            margin: 0 7.5px;
-  }
-}
-  h4 {
-      background-color: rgb(241, 213, 179);
-      padding: 10px;
-      border-radius: 5px;
-      width:max-content ;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-  }
   img {
     max-width: 230px;
     border-radius: 8px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
   }
-  
+  .bt {
+    float: unset;
+    margin-top: unset;
+    margin-right: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -12,8 +12,8 @@
   <div class="gallery-container">
     <header><h1>GERENCIAR SUAS POSTAGENS</h1></header>
     <div class="bt">
-      <input type="button" value="Abrir Site Principal" onclick="window.location.href='../index.html'">
-      <input type="button" value="Adicionar Novas Imagens" onclick="window.location.href='postar.html'">
+      <input type="button" value="Abrir Galeria" onclick="window.location.href='../gallery/gallery.html'">
+      <input type="button" value="Fazer uma Postagem" onclick="window.location.href='postar.html'">
       <input type="button" value="Sair da conta" onclick="logout()">
     </div>
     <div id="gallery" class="gallery">
@@ -26,6 +26,7 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <script>
@@ -34,14 +35,16 @@
 
     firebase.initializeApp(firebaseConfig);
     const db = firebase.database();
+    const storage = firebase.storage();
 
     class Gerenciar {
-      constructor(chave, dados) {
-        this.chave = chave;
-        this.dados = dados;
-      }
+  constructor(chave, dados) {
+    this.chave = chave;
+    this.dados = dados;
+  }
 
-      novaDescricao() {
+
+  novaDescricao() {
         const key = this.chave;
         const imagData = this.dados;
         const newDescription = prompt('Digite a nova descrição:');
@@ -84,22 +87,51 @@
         }
       }
 
+
       delete() {
-        const key = this.chave;
-        const confirmDelete = confirm('Tem certeza de que deseja excluir esta imagem?');
-        if (confirmDelete) {
-          db.ref('images/' + key).remove()
-            .then(() => {
-              alert('Imagem excluída com sucesso!');
-              loadImages(); // Recarrega as imagens após a exclusão
-            })
-            .catch((error) => {
-              console.error('Erro ao excluir imagem:', error);
-              alert('Ocorreu um erro ao excluir a imagem.');
-            });
-        }
-      }
-      logout() {
+    const key = this.chave;
+    const imageData = this.dados;
+    const confirmDelete = confirm('Tem certeza de que deseja excluir esta imagem?');
+
+    if (!confirmDelete) {
+      return; // Cancela e não exclui
+    }
+
+    const imageUrl = imageData.imageUrl; // Assume que 'imageUrl' é a URL da imagem no Storage
+
+    // Deleta do Storage
+    const storageRef = firebase.storage().refFromURL(imageUrl);
+    storageRef.delete().then(() => {
+      // Deleta do Realtime Database
+      db.ref('images/' + key).remove().then(() => {
+        Swal.fire({
+          title: "Sucesso",
+          text: "Imagem excluída com sucesso!",
+          confirmButtonColor: "#a07146",
+          icon: "success"
+        });
+        loadImages(); // Recarrega as imagens após a exclusão
+      }).catch((error) => {
+        console.error('Erro ao excluir imagem do banco de dados:', error);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Algum erro ocorreu ao excluir a imagem.",
+          confirmButtonColor: "#a07146",
+        });
+      });
+    }).catch((error) => {
+      console.error('Erro ao excluir imagem do armazenamento:', error);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Algum erro ocorreu ao excluir a imagem.",
+        confirmButtonColor: "#a07146",
+      });
+    });
+  }
+
+  logout() {
       firebase.auth().signOut()
         .then(() => {
           // Logout bem sucedido, redireciona para a página de login
@@ -110,7 +142,8 @@
           alert('Ocorreu um erro ao fazer logout.');
         });
       }
-    }
+}
+
 
     // Verifica se há um usuário autenticado ao carregar a página
     firebase.auth().onAuthStateChanged(function(user) {
@@ -131,7 +164,6 @@
           const imageData = childSnapshot.val();
           const imageKey = childSnapshot.key;
 
-          // Cria um elemento de imagem para cada imagem na base de dados
           const imageElement = document.createElement('div');
           imageElement.classList.add('image');
 
@@ -143,7 +175,7 @@
           description.textContent = imageData.description;
           imageElement.appendChild(description);
 
-          // Adiciona botões de edição e remoção para cada imagem
+          // Adiciona os botões de edição e remoção
           const editButton = document.createElement('button');
           editButton.textContent = 'Editar';
           editButton.addEventListener('click', () => editImage(imageKey, imageData));
@@ -168,13 +200,14 @@
 
     // Função pra excluir
     function deleteImage(key) {
-      db.ref('images/' + key).once('value', (snapshot) => {
-        const imageData = snapshot.val();
-        new Gerenciar(key, imageData).delete();
-      });
-    }
+  db.ref('images/' + key).once('value', (snapshot) => {
+    const imageData = snapshot.val();
+    new Gerenciar(key, imageData).delete();
+  });
+}
 
-    // Função pra logout
+
+    // Função para logout
     function logout() {
       new Gerenciar().logout()
     }
