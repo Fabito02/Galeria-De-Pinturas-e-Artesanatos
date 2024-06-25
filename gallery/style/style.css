@@ -339,8 +339,8 @@ footer {
   margin-right: 25px;
 }
 .modal-conteudo {
-  min-height: 500px;
-  max-height: 80%;
+  min-width: 500px;
+  max-width: 45%;
   position: absolute;
   left: 50%;
   top: 50%;
