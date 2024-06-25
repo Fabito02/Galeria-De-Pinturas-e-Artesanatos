@@ -47,7 +47,7 @@
   novaDescricao() {
         const key = this.chave;
         const imagData = this.dados;
-        const newDescription = prompt('Digite a nova descrição:');
+        const newDescription = prompt('Digite a nova descrição (até 250 caracteres):').slice(0, 250);
 
         if (newDescription === "") {
           Swal.fire({
