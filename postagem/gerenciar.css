@@ -18,13 +18,13 @@ h1 {
 }
 
 .image {
-  background-color: #f0dcbd;
+  background-color: #f2dfc4;
   padding: 16px;
   border-radius: 12px;
   margin: 35px;
   display: flex;
-  flex-direction: column; /* Organiza os elementos verticalmente */
-  align-items: center; /* Centraliza os elementos horizontalmente */
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
@@ -93,7 +93,7 @@ button:hover {
 }
 
 h4 {
-  background-color: rgb(230, 234, 208);
+  background-color: rgb(224, 193, 149);
   padding: 5px;
   border-radius: 5px;
   width: max-content;
