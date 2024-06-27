@@ -2,10 +2,10 @@ var isMobile = window.matchMedia("(max-width: 720px)").matches;
 
     if (isMobile != true) { 
         // Função para abrir o modal com a imagem clicada
-        function openModal(imageUrl) {
+        function abrirModal(fileUrl) {
           let modal = document.getElementById("modal");
           let imagemModal = document.getElementById("imagem-modal");
-          imagemModal.src = imageUrl;
+          imagemModal.src = fileUrl;
           modal.style.display = "block";
         }
     }

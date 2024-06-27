@@ -97,10 +97,10 @@
       return; // Cancela e não exclui
     }
 
-    const imageUrl = imageData.imageUrl; // Assume que 'imageUrl' é a URL da imagem no Storage
+    const fileUrl = imageData.fileUrl; // Assume que 'fileUrl' é a URL da imagem no Storage
 
     // Deleta do Storage
-    const storageRef = firebase.storage().refFromURL(imageUrl);
+    const storageRef = firebase.storage().refFromURL(fileUrl);
     storageRef.delete().then(() => {
       // Deleta do Realtime Database
       db.ref('images/' + key).remove().then(() => {
@@ -168,7 +168,7 @@
           imageElement.classList.add('image');
 
           const img = document.createElement('img');
-          img.src = imageData.imageUrl;
+          img.src = imageData.fileUrl;
           imageElement.appendChild(img);
 
           const description = document.createElement('h4');

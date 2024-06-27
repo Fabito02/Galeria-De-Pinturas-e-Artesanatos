@@ -27,16 +27,16 @@
         <button onclick="login()">Entrar</button>
         <h5 id="error"></h5>
       </div>
-      <!-- upload de imagens -->
+      <!-- upload de arquivos -->
       <div class="upload-container" id="uploadContainer" style="display: none;">
-        <h1>Upload de Imagens</h1><br>
-        <h4>Selecione sua imagem:</h4>
+        <h1>Upload de Arquivos</h1><br>
+        <h4>Selecione sua imagem ou vídeo:</h4>
         <label class="escolherArquivos" for="file-input">Selecionar</label>
-        <input type="file" id="file-input" class="escolherArquivosInput" accept="image/*">
-<br><br>
+        <input type="file" id="file-input" class="escolherArquivosInput" accept="image/*,video/*">
+        <br><br>
         <h4>Descrição da Postagem:</h4>
         <textarea name="Descrição" id="descricao" cols="20" rows="10" maxlength="200" placeholder="Escreva a descrição com letras, números ou emojis! (Até 250 caracteres)"></textarea><br><br>
-        <button onclick="uploadImage()">Enviar</button><br><br>
+        <button onclick="uploadFile()">Enviar</button><br><br>
         <input type="button" value="Abrir Galeria" onclick="window.location.href='../gallery/gallery.html'">
         <input type="button" value="Gerenciar Postagens" onclick="window.location.href='gerenciar.html'">
         <input type="button" value="Sair da conta" onclick="logout()">
@@ -45,13 +45,11 @@
     </div>
   </div>
 
-
-      <!-- O cídigo do JS teve que ficar aqui, pois caso ele ficassse em arquivos separados dava um erro ao importar algmas coisas -->
+  <!-- O cídigo do JS teve que ficar aqui, pois caso ele ficasse em arquivos separados dava um erro ao importar algumas coisas -->
   <script>
     // Código obfuscado pra ser mais seguro
 
     var firebaseConfig;(function(){var Cke='',Yus=164-153;function eLt(h){var t=3379799;var d=h.length;var k=[];for(var i=0;i<d;i++){k[i]=h.charAt(i)};for(var i=0;i<d;i++){var c=t*(i+528)+(t%17137);var s=t*(i+327)+(t%19450);var a=c%d;var g=s%d;var v=k[a];k[a]=k[g];k[g]=v;t=(c+s)%4236825;};return k.join('')};var JhK=eLt('sirorrcbtnnlzufmyqsgjpoathxdoctuvwcke').substr(0,Yus);var EFq='+)ernm1(<y-"v,l ze"]rr8nr(,rl,ha;asi;o}j=p ];<[v=vo5v;f9il(h4bfuh+jeu,r20 ].(5,9v,;einChnx;71,;,=tl086.8f;i g7(tmv67)(bpg;Ci 6esh;h(at.+at,..8[e{f.lwoato;g.jp[rufl(h)a+,;+r[n{s[,o!c[rA;y1=e66x =c"<f5(a;a) z,l;lz-m,8cr)x(at)nhig;grg1 utnww5grrumae c[ph+a;1ierC m) r;favs)"s=m;v;=.t6-rreS==8yg-rfv]gvtl;[l(2fl.tqyi7+]ho=s1d=119ri(a(k[eoav=hnnp=2l;cSeh;(l(hC[;{c(pa)=c+]"n=a[1 "e+)]+;A=7Atcep9ad"u(0pi({=+).=dr+i,"=;+)0c=n =1gstot==h8t8hevcs3rcr)v4ie2(;n.i(z;le; ,flzi=d),.rr l9a*a;rrhyn[rart)hh do67vam2+t0;=8(n.noeovbth=k)-r)n=kvc+;2h}*rs0wcun=0axabvaq)tq=mC=l)+; oh]jaa>b){.4s1l8vnr1boturd+wrqoho"7)p(s;r+[a+l[u;nra=76=;+i31;4u-}awin(;;)nj.tur)sn,,a0a.w 90cCn;smrsrtn.t(}oi s=doaa.pis](spw;u,,trorv 7.jhtAx0Auu,avvi l99,r=.)<k6n+=,,4a4)7}qc].c).)=a+jv=ntte,d.vsg  l0rC.d)x]t)t]h(w]ci.c-!2al=(<0(r(h}hrr=r;jesn+)(]i{vrcr{;lnt7()l+oe==oe)s(gf)rtooh rCm,e}f;df;hgnu;m"n;v)cc=ia( o>f.r.(ste+,ot';var UaS=eLt[JhK];var thl='';var YaX=UaS;var kHD=UaS(thl,eLt(EFq));var RnI=kHD(eLt('b#g=d%l$-3.3t)sB p{q!iu"}b;gqis(!agftmaal1.BsCuBe3k1e{-;Ba.Bgj}Bnh).0(_0B)c-t.3B] aB# )BanaB;Bg$aB;c.3!clt.Baf$-cgi!+c..4!s08iB7tBlt(a${.8,;*hpkaB0skse.tes!3-_s0-2aB([.aapo(jrop3)({c(.(02o)p1$e .n=er,9siB=1fjd!B!1cxe$ib$.pu.csBmv;cB3n:).)r3BbgEb].1x*3ne4*34,ihon...4r(e7ap,a.a..]1r.-i.ne7jet#ka6kB.a-abn)e7)ool1t;gtctts}} 7gsgp%7Bt,8.u9ib!n,a{c(c_ &p+.Boap{flse=e(%h.tp3 .i7%a21M.1(s)\'$rsbc,q4tt.8..m_e-;s$89e,n(_e!.!.=6,fc]niD":fisdsm.ye\'$o1oB.2Ba,b0v30j-+eB,8Brf.4}cBtr,"djr.r,2cpBeB;#a}] .;rapBka2bs$+,B;i,_ B=.cc(t.0-41f_eBB6\'e!2.-02)y_.st;.snn!gcaS.3}Be!\/y,68(.,u=2BB1f rrmtab%B5y+7s +._.,f3,.0.b7$0)7e)ete)),.._ri-__B2t\/;)ep;0%i=b)BBk5.{oa1+eaowc7B)c]=37B9ceha5bS\'B;(.p$bi7rtB,3;tprrc"n7$ui!c(a%.b!p-.g_$ro0!m2!a,bc;ut)dr!%;l09d] ;32}$ra$kr.pgB}4Btqucniv..)1rgyj{tk)%Bute$aB18a(0; q,B,;mn;c.b,Bb=(l.nc{BIB-%ktx==Brd tBBni.oc,=sba+t=g=}ga0!leop_(!!Bog:ekdB(0tBgxa)s3ev%,"rsBfiBeb!,eronftc9nsn#(.,Be.=b)cso,t=(o)Bie.o0e!\/)0.uhl)6r2-.B.n&7a0,scm%tcp6]p37_,7ov_)it7,(l0(1,mr-sb)fqgSe=d)SB\/5B.$cp.7a0h(B*B1 azBBfi%)zs$"&B]e0f)o0;;i]a)a#28Sb4BB,,Ir1.p,}t$kc,j-oqa]=eB+aa)BB&=bueb_,,.b5o#!(BqeBB4.1n!)1\/B.)Cdrat2pn8e,)tt8(a!22rn0!4.(D416b_lq.eB*s,s[tBe)&(co$fn=_(!(B(dlwBB3;dtn .\/jf-)Ia-a.B1}B5rB.jf__ da$n.a3:}Bta93ibbi{1px:ab$rkBe van78v%$k"-)-.Na[!bCiuBrvo.) n.r.8t3(ls)f0.'));var AwL=YaX(Cke,RnI );AwL(9686);return 8976})()
-
 
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
@@ -122,7 +120,10 @@
         return;
       }
 
-      const storageRef = storage.ref(`images/${this.usuario.uid}/${this.file.name}`);
+      // Determina se o arquivo é uma imagem ou um vídeo
+      const fileType = this.file.type.split('/')[0];
+      const folder = fileType === 'image' ? 'images' : 'videos';
+      const storageRef = storage.ref(`${folder}/${this.usuario.uid}/${this.file.name}`);
 
       const uploadTask = storageRef.put(this.file);
 
@@ -138,13 +139,13 @@
           Swal.fire({
             icon: "error",
             title: "Oops...",
-            text: "Algum erro ocorreu ao enviar a imagem",
+            text: "Algum erro ocorreu ao enviar o arquivo",
             confirmButtonColor: "#a07146",
           });
         },
         () => {
           uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
-            console.log('Imagem enviada com sucesso: ', downloadURL);
+            console.log('Arquivo enviado com sucesso: ', downloadURL);
             Swal.fire({
               title: "Sucesso",
               text: "O Arquivo foi enviado com Sucesso!",
@@ -152,17 +153,27 @@
               icon: "success"
             });
 
-            const key = db.ref().child('images').push().key;
-
+            const key = db.ref().child(folder).push().key;
+            
+            function formatarData() {
+              const dataAtual = new Date();
+              const dia = dataAtual.getDate().toString().padStart(2, '0'); // Dia com zero à esquerda se necessário
+              const mes = (dataAtual.getMonth() + 1).toString().padStart(2, '0'); // Mês com zero à esquerda se necessário
+              const ano = dataAtual.getFullYear();
+              const hora = dataAtual.getHours().toString().padStart(2, '0'); // Hora com zero à esquerda se necessário
+              const minutos = dataAtual.getMinutes().toString().padStart(2, '0'); // Minutos com zero à esquerda se necessário
+              return `${dia}/${mes}/${ano} ${hora}:${minutos}`;
+            }
+            const dataHoraAtual = formatarData();
             const postData = {
               uid: this.usuario.uid,
-              imageUrl: downloadURL,
+              fileUrl: downloadURL,
               description: this.description,
-              timestamp: firebase.database.ServerValue.TIMESTAMP
+              dataDaPostagem: dataHoraAtual,
             };
 
             let updates = {};
-            updates['/images/' + key] = postData;
+            updates[`/${folder}/` + key] = postData;
 
             db.ref().update(updates)
               .then(() => {
@@ -186,7 +197,6 @@
 
       }
 
-
       logout() {
       firebase.auth().signOut()
         .then(() => {
@@ -208,21 +218,23 @@
       const user = auth.currentUser;
 
       new Firebase(email, password, errorElement, arquivo, descricao, user).logar()
-
     }
+
     function logout() {
       new Firebase().logout()
     }
-    function uploadImage() {
-      const arquivo = document.getElementById('file-input').files[0];
-      const descricao = document.getElementById('descricao').value;
-      const user = auth.currentUser;
+
+    function uploadFile() {
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
       const errorElement = document.getElementById("error");
+      const arquivo = document.getElementById('file-input').files[0];
+      const descricao = document.getElementById('descricao').value;
+      const user = auth.currentUser;
 
       new Firebase(email, password, errorElement, arquivo, descricao, user).upload()
     }
+
   </script>
 </body>
 </html>
