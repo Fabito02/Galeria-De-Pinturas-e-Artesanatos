@@ -129,7 +129,10 @@ class Firebase {
 
             const text = document.createElement('span');
             text.classList.add('textVideo');
-            text.textContent = videoData.description;
+            const conteudo = document.createElement('span');
+            conteudo.classList.add('conteudoText');
+            conteudo.textContent = videoData.description;
+            text.appendChild(conteudo);
             videoElement.appendChild(text);
 
             gallery.insertBefore(videoElement, gallery.firstChild);
