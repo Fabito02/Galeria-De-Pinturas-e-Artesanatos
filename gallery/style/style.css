@@ -456,6 +456,7 @@ img {
   transform: translateX(5px);
 }
   header {
+    padding-top: 17px;
       height: auto;
   }
   .image {
