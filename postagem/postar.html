@@ -35,7 +35,7 @@
         <input type="file" id="file-input" class="escolherArquivosInput" accept="image/*,video/*">
         <br><br>
         <h4>Descrição da Postagem:</h4>
-        <textarea name="Descrição" id="descricao" cols="20" rows="10" maxlength="200" placeholder="Escreva a descrição com letras, números ou emojis! (Até 250 caracteres)"></textarea><br><br>
+        <textarea name="Descrição" id="descricao" maxlength="250" placeholder="Escreva a descrição com letras, números ou emojis! (Até 250 caracteres)"></textarea><br><br>
         <button onclick="uploadFile()">Enviar</button><br><br>
         <input type="button" value="Abrir Galeria" onclick="window.location.href='../gallery/gallery.html'">
         <input type="button" value="Gerenciar Postagens" onclick="window.location.href='gerenciar.html'">
@@ -157,11 +157,11 @@
             
             function formatarData() {
               const dataAtual = new Date();
-              const dia = dataAtual.getDate().toString().padStart(2, '0'); // Dia com zero à esquerda se necessário
-              const mes = (dataAtual.getMonth() + 1).toString().padStart(2, '0'); // Mês com zero à esquerda se necessário
+              const dia = dataAtual.getDate().toString().padStart(2, '0'); 
+              const mes = (dataAtual.getMonth() + 1).toString().padStart(2, '0'); 
               const ano = dataAtual.getFullYear();
-              const hora = dataAtual.getHours().toString().padStart(2, '0'); // Hora com zero à esquerda se necessário
-              const minutos = dataAtual.getMinutes().toString().padStart(2, '0'); // Minutos com zero à esquerda se necessário
+              const hora = dataAtual.getHours().toString().padStart(2, '0'); 
+              const minutos = dataAtual.getMinutes().toString().padStart(2, '0');
               return `${dia}/${mes}/${ano} ${hora}:${minutos}`;
             }
             const dataHoraAtual = formatarData();

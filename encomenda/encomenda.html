@@ -20,7 +20,7 @@
       </div>
       <div class="dropdown" id="dropdown"> 
         <input type="button" value="Galeria de Arte" onclick="window.location.href='../gallery/gallery.html'">
-        <a href="../index.html">Página inicial</a>
+        <a href="../index.html">Página Inicial</a>
         <a href="encomenda.html">Fazer Encomenda</a>
         <a onclick="mostrarRedesSociais()" id="setaAnimada">Redes Sociais <div class="arrow-down" style="display: inline-block;"></div></a>
         <div id="social" style="display: none;" class="toggle-button">
@@ -39,14 +39,14 @@
   </header>
 
   <main>
-    <div class="form">
+    <div class="form" id="novoPedido">
       <form action="/upload" method="post" enctype="multipart/form-data">
-        <h1>Fazer Encomenda</h1><br>
+        <h1>Faça uma Encomenda</h1><br>
         <h5>"*" Indica um campo obrigatório</h5>
-        <h2>Descreva o seu pedido</h2>
+        <h2>Descreva Seu Pedido</h2>
         <b>*Descrição: </b><br><br>
-        <textarea id="descricao" name="text" rows="8" cols="30" placeholder="Descreva como deseja sua encomenda... (até 1000 caracteres)" required maxlength="1000"></textarea><br><br>
-        <h2>Escreva seus contatos</h2><br>
+        <textarea id="descricao" name="text" placeholder="Descreva como deseja sua encomenda... (até 1000 caracteres)" required maxlength="1000"></textarea><br><br>
+        <h2>Seus Contatos</h2><br>
         <b>*Nome: </b><br><input type="text" placeholder="Escreva seu nome..." id="nomeCliente" required><br><br>
         <b>*Email: </b><br><input type="email" placeholder="Escreva seu e-mail..." id="emailCliente" required><br><br>
         <b>*Telefone: </b><br><input type="tel" placeholder="Escreva seu telefone..." id="telefoneCliente" required max=""><br><br>
@@ -55,12 +55,12 @@
         <b>*Bairro: </b><br><input type="text" placeholder="O nome do seu bairro..." id="bairroCliente" required><br><br>
         <b>*Rua: </b><br><input type="text" placeholder="Sua rua..." id="ruaCliente"><br><br>
         <b>*Número da Casa: </b><br><input type="number" placeholder="O número da sua casa..." id="casaCliente"><br><br>
-        <h2>Imagem de referência </h2>
+        <h2>Imagem de Referência </h2>
         <h5>Caso julgue necessário o envio de uma imagem, coloque o seu link do Google Drive, Google Fotos ou qualquer outra plataforma que prefira no campo abaixo. Devido a problemas de compatibilidade, não é possível anexar arquivos diretamente.
         </h5>
         <b>Link (Envio Recomendado): </b>
         <input type="text" placeholder="Digite o Link aqui..." id="link"><br><br>
-        <input type="button" value="Enviar Pedido" onclick="enviarPedido()" id="botaoEnviar">
+        <input type="submit" value="Enviar Pedido" onclick="enviarPedido()" id="botaoEnviar">
       </form>
     </div>
     <footer></footer>

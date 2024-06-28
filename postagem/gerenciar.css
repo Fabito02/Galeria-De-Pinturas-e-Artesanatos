@@ -9,7 +9,7 @@ h1 {
   text-align: center;
 }
 
-.gallery {
+.gallery, .galleryVideo {
   margin-top: 120px;  
   display: flex;
   flex-wrap: wrap;
@@ -17,7 +17,7 @@ h1 {
   align-items: center;
 }
 
-.image {
+.image, .video {
   background-color: #fce6c7;
   padding: 16px;
   border-radius: 12px;
@@ -37,7 +37,7 @@ footer {
   height: 80px;
 }
 
-img {
+img, video {
   width: 250px;
   border-radius: 8px;
   margin-top: 30px;
@@ -114,7 +114,7 @@ h4 {
   header h1 {
     font-size: 28px;
   }
-  .gallery {
+  .gallery, .galleryVideo {
     margin-top: 0px;
     flex-direction: column; 
     align-items: center;
@@ -134,7 +134,7 @@ h4 {
     margin: 4px;
   }
 
-  .image {
+  .image, .video {
     margin: 0px;
     margin-bottom: 30px;
   }
@@ -149,7 +149,7 @@ h4 {
     margin-right: auto;
   }
 
-  img {
+  img, video {
     max-width: 230px;
     border-radius: 8px;
     display: block;

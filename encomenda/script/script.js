@@ -1,5 +1,8 @@
 //bgl pra animar o botão quando eu clicar
-
+let novoPedido = document.getElementById('novoPedido');
+novoPedido.onsubmit = function(event) {
+    event.preventDefault();
+}
 class Menu {
   constructor(menuToOpen) {
     this.menuToOpen = menuToOpen
@@ -91,7 +94,19 @@ function toggleSocial() {
         });
         return;
       }
-    
+        
+      function limparPedido() {
+        document.getElementById('nomeCliente').value = "";
+        document.getElementById('emailCliente').value = "";
+        document.getElementById('telefoneCliente').value = "";
+        document.getElementById('descricao').value = "";
+        document.getElementById('cidadeCliente').value = "";
+        document.getElementById('bairroCliente').value = "";
+        document.getElementById('ruaCliente').value = "";
+        document.getElementById('link').value = "";
+        document.getElementById('casaCliente').value = NaN;
+      }
+
       emailjs.send("service_ufnl1o9", "template_p331abb", {
         from_name: this.nomeDoCliente,
         dica: "*OBS: Responda o cliente o quanto antes para não perde-lo",
@@ -112,6 +127,7 @@ function toggleSocial() {
           confirmButtonColor: "#a07146",
           icon: "success"
         });
+        limparPedido()
       }, function(error) {
         Swal.fire({
           icon: "error",
@@ -123,19 +139,20 @@ function toggleSocial() {
       });
     }
   }
- 
+
+
   function enviarPedido() {
         
-      var nomeCliente = document.getElementById('nomeCliente').value.trim();
-      var emailCliente = document.getElementById('emailCliente').value.trim();
-      var telefoneCliente = document.getElementById('telefoneCliente').value.trim();
-      var descricaoPedido = document.getElementById('descricao').value;
-      var cidadeCliente = document.getElementById('cidadeCliente').value.trim();
-      var bairroCliente = document.getElementById('bairroCliente').value.trim();
-      var ruaCliente = document.getElementById('ruaCliente').value.trim();
-      var linkImagem = document.getElementById('link').value.trim();
-      var casaCliente = document.getElementById('casaCliente').value;
+      let nomeCliente = document.getElementById('nomeCliente');
+      let emailCliente = document.getElementById('emailCliente');
+      let telefoneCliente = document.getElementById('telefoneCliente');
+      let descricaoPedido = document.getElementById('descricao');
+      let cidadeCliente = document.getElementById('cidadeCliente');
+      let bairroCliente = document.getElementById('bairroCliente');
+      let ruaCliente = document.getElementById('ruaCliente');
+      let linkImagem = document.getElementById('link');
+      let casaCliente = document.getElementById('casaCliente');
 
-    new Pedido(nomeCliente, emailCliente, telefoneCliente, descricaoPedido, cidadeCliente, bairroCliente, ruaCliente, linkImagem, casaCliente).setPedido();
-
+    new Pedido(nomeCliente.value.trim(), emailCliente.value.trim(), telefoneCliente.value.trim(), descricaoPedido.value, cidadeCliente.value.trim(), bairroCliente.value.trim(), ruaCliente.value.trim(), linkImagem.value.trim(), casaCliente.value).setPedido();
+    novoCliente
   }
