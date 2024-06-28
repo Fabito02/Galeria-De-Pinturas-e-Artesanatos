@@ -106,7 +106,6 @@ function toggleSocial() {
         document.getElementById('link').value = "";
         document.getElementById('casaCliente').value = NaN;
       }
-
       emailjs.send("service_ufnl1o9", "template_p331abb", {
         from_name: this.nomeDoCliente,
         dica: "*OBS: Responda o cliente o quanto antes para não perde-lo",

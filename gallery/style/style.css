@@ -362,15 +362,15 @@ footer {
   max-width: 100%;
   word-wrap: break-word;
   transition: opacity 0.2s ease-in-out;
-  border-radius: 12px 12px 5px 5px;
+  border-radius: 12px 12px 0px 0px;
   overflow: hidden; /* Ocultar conteúdo excedente */
 }
 
 .video .textVideo .conteudoText {
   display: inline-block;
-  padding-left: 100%; /* Iniciar fora do container */
+  padding-left: 100%;
   animation: marquee 10s linear infinite;
-  white-space: nowrap; /* Impedir quebra de linha */
+  white-space: nowrap
 }
 
 .video:hover .textVideo {
@@ -437,9 +437,14 @@ img {
 
 @media (max-width: 720px) {
   .video video {
-    width: 94%;
+    width: 100%;
     border-radius: 12px;
     height: auto;
+    transform: translateX(-8px);
+  }
+  .video .textVideo {
+    max-width: 100%;
+    transform: translateX(-8px);
   }
   .kwaiIcon img {
     border-radius: unset;
