@@ -38,7 +38,7 @@ input[type="submit"]:hover {
 
 
 ::selection {
-background-color: rgb(216, 162, 127);
+  background-color: rgb(178, 195, 157);
 }
 input[type = "email"], input[type = "password"] {
   border-radius: 5px;
