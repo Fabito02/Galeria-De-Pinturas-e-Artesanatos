@@ -402,7 +402,8 @@ footer {
   user-select: none;
 }
 .modal-conteudo {
-  max-height: 600px;
+  max-height: 90vh;
+  max-width: 95vh;
   position: absolute;
   left: 50%;
   top: 50%;
