@@ -93,12 +93,17 @@ header {
 
 
 .botoes img {
+  margin-left: 16px;
   max-width: 150px;
   max-height:150px;
   position: relative;
-  margin-left: 2%;
   padding: 10px;
   cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.2s;
+}
+.botoes img:hover {
+  background-color: #6a2f0821;
 }
 
 
@@ -133,32 +138,9 @@ header {
   width: 32px;
 }
 
-
-
 /* dropdown */
 .dropdown {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  right: 20px;
-  background-color: #f3e1d0;
-  box-shadow: 0px 8px 16px 0px #00000067;
-  z-index: 1000; /* Aumentar z-index */
-  margin-top: 370px;
-  border-radius: 8px;
-  transform: translateY(-10px);
-  transition: opacity 0.20s ease-in-out, transform 0.20s ease-in-out, visibility 0.20s;
-}
-
-.menu.active + .dropdown {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-/* dropdown */
-.dropdown {
+  user-select: none;
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -323,6 +305,7 @@ footer {
   align-items: center;
   text-align: center;
   transition: background-color 0.5s;
+  cursor: pointer;
 }
 .selectMediaType button:hover {
   background-color: #815c39;
@@ -460,8 +443,7 @@ img {
   transform: translateX(5px);
 }
   header {
-    padding-top: 17px;
-      height: auto;
+    height: auto;
   }
   .image {
     position: relative;
@@ -577,8 +559,8 @@ img {
   }
 
   .botoes img {
-    margin-left: 0%;
-    padding: 0;
+    margin: 0;
+    padding: 5px;
   }
 
   .menu {

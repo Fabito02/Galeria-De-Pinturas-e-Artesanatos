@@ -121,8 +121,12 @@ function toggleSocial() {
       }).then(function(response) {
         console.log('Pedido enviado')
         Swal.fire({
-          title: "Sucesso",
-          text: "Seu Pedido foi Enviado com Sucesso!",
+          title: "Seu Pedido foi Enviado com Sucesso!",      
+          html: 
+           `<strong><p style="color: #765443;">Recebi suas informações e estou analisando seu pedido com carinho ❤️</p></strong>
+            <p>Aguarde um momento enquanto entro em contato com você em breve.</p>
+            <p>Se precisar de mais alguma coisa ou tiver dúvidas, por favor, entre em contato comigo pelo e-mail: <a href="mailto:gleicianelima710@gmail.com">gleicianelima710@gmail.com</a>.</p>
+            <strong><p style="color: #5e6b4b;">Agradeço sua paciência e preferência!</p></strong>`,
           confirmButtonColor: "#a07146",
           icon: "success"
         });

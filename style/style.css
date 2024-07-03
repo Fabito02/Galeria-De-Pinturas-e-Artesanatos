@@ -137,12 +137,17 @@ footer {
   padding: 2px;
 }
 .botoes img {
+  margin-left: 16px;
   max-width: 150px;
   max-height:150px;
   position: relative;
-  margin-left: 2%;
   padding: 10px;
   cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.2s;
+}
+.botoes img:hover {
+  background-color: #6a2f0821;
 }
 
 
@@ -233,6 +238,7 @@ footer {
 
 /* dropdown */
 .dropdown {
+  user-select: none;
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -356,7 +362,6 @@ footer {
     margin: 0;
   }
   header {
-    padding-top: 17px;
       height: auto;
   }
   .botoes {
@@ -391,8 +396,8 @@ footer {
       margin-left: 1%;
   }
   .botoes img {
-    margin-left: 0%;
-    padding: 0;
+    margin: 0;
+    padding: 5px;
   }
   .menu {
     margin-bottom: 15px; 
