@@ -14,7 +14,7 @@ header {
   font-family: 'Inter';
   align-items: center;
   border-color: #8a604b;
-  background-color: #f3e1d0b4;
+  background-color: #f5e6ce;
 }
 .botoes {
   display: flex;
@@ -389,7 +389,7 @@ footer {
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.9);
-  z-index: 1000;
+  z-index: 200;
 }
 
 .fechar {
@@ -397,7 +397,6 @@ footer {
   float: right;
   font-size: 40px;
   font-weight: bold;
-  margin-right: 25px;
   margin-right: 25px;
   user-select: none;
 }

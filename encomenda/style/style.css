@@ -1,10 +1,10 @@
 
 body {
-    font-family: 'Inter';
-    background-color: #fff8f4;
-    color: #53392a;
-    margin: 0;
-  }
+  font-family: 'Inter';
+  background-color: #fff8f4;
+  color: #53392a;
+  margin: 0;
+}
 
 ::selection {
   background-color: rgb(178, 195, 157);
@@ -22,7 +22,7 @@ header {
   font-family: 'Inter';
   align-items: center;
   border-color: #8a604b;
-  background-color: #f3e1d0b4;
+  background-color: #f5e6ce;
 }
 
 .botoes {
