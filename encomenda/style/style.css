@@ -89,7 +89,7 @@ textarea {
   resize: none;
   position: absolute;
   width: 250px;
-  height: 46px;
+  height: 52px;
   outline: none;
   border-radius: 12px;
   transition: box-shadow 0.25s, width 0.25s, heigth 0.25s, border-radius 0.25s;
@@ -353,7 +353,7 @@ header {
         margin-left: 1%;
     }
     textarea {
-      width: 52vw;
+      width: 61vw;
       transition: box-shadow 0.25s, width 0.25s, heigth 0.25s, border-radius 0.25s;
       margin-right: 15px;
     }
