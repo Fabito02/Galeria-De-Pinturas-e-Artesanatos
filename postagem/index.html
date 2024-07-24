@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faça postagens em sua galeria</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="box">
+      <!-- upload de arquivos -->
+      <div class="upload-container" id="uploadContainer">
+        <h1>Upload de Arquivos</h1><br>
+        <h4>Selecione sua imagem ou vídeo:</h4>
+        <label class="escolherArquivos" for="file-input">Selecionar</label>
+        <input type="file" id="file-input" class="escolherArquivosInput" accept="image/*,video/*">
+        <br><br>
+        <h4>Descrição da Postagem:</h4>
+        <textarea name="Descrição" id="descricao" maxlength="250" placeholder="Escreva a descrição com letras, números ou emojis! (Até 250 caracteres)"></textarea><br><br>
+        <button onclick="uploadFile()">Enviar</button><br><br>
+        <input type="button" value="Abrir Galeria" onclick="window.location.href='../gallery/'">
+        <input type="button" value="Gerenciar Postagens" onclick="window.location.href='gerenciar.html'">
+        <input type="button" value="Sair da conta" onclick="logout()">
+        <b><h4 id="uploadProgress"></h4></b>
+      </div>
+    </div>
+  </div>
+
+  <!-- O cídigo do JS teve que ficar aqui, pois caso ele ficasse em arquivos separados dava um erro ao importar algumas coisas -->
+  
+  <!-- Scripts do Firebase -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="../firebase-config.js"></script>
+  <script src="scripts/post.js"></script>
+</body>
+</html>

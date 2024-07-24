@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre o Vale do Jequitinhonha</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  
+</head>
+<body>
+  <header>
+    <div class="botoes">
+        <img src="../img/logo.png" alt="Imagem 1" onclick="window.location.href='../'">
+        <div class="texto">
+        </div>
+    <div class="menu" id="menu" onclick="animacaoDoMenu()">
+        <span class="barrinha-menu"></span>
+        <span class="barrinha-menu"></span>
+        <span class="barrinha-menu"></span>
+    </div>
+    <div class="dropdown" id="dropdown">
+            <input type="button" value="Galeria de Arte" onclick="window.location.href='../gallery/'">
+        <a href="../">Página Inicial</a>
+        <a href="../encomenda/">Fazer Encomenda</a>
+        <a onclick="mostrarRedesSociais()" id="setaAnimada">Redes Sociais <div class="arrow-down" style="display: inline-block;"></div></a>
+        <div id="social" style="display: none;" class="toggle-button">
+          <ul>
+            <li><a href="https://www.facebook.com/share/M3rtkJkxFXiuwMPU/?mibextid=qi2Omg" target="_blank"><svg style="margin: 1px" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="39" height="39" viewBox="0 0 48 48"> <path fill="#3F51B5" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"></path><path fill="#FFF" d="M34.368,25H31v13h-5V25h-3v-4h3v-2.41c0.002-3.508,1.459-5.59,5.592-5.59H35v4h-2.287C31.104,17,31,17.6,31,18.723V21h4L34.368,25z"></path> </svg><span>Facebook</span></a></li>
+
+            <li><a href="https://www.instagram.com/gleiciane_lima_pinturas?igsh=MWM1Nm4zaGptM2V3YQ==" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 48 48"> <radialGradient id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1" cx="19.38" cy="42.035" r="44.899" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fd5"></stop><stop offset=".328" stop-color="#ff543f"></stop><stop offset=".348" stop-color="#fc5245"></stop><stop offset=".504" stop-color="#e64771"></stop><stop offset=".643" stop-color="#d53e91"></stop><stop offset=".761" stop-color="#cc39a4"></stop><stop offset=".841" stop-color="#c837ab"></stop></radialGradient><path fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20 c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20 C42.014,38.383,38.417,41.986,34.017,41.99z"></path><radialGradient id="yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2" cx="11.786" cy="5.54" r="29.813" gradientTransform="matrix(1 0 0 .6663 0 1.849)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4168c9"></stop><stop offset=".999" stop-color="#4168c9" stop-opacity="0"></stop></radialGradient><path fill="url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20 c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20 C42.014,38.383,38.417,41.986,34.017,41.99z"></path><path fill="#fff" d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5 s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"></path><circle cx="31.5" cy="16.5" r="1.5" fill="#fff"></circle><path fill="#fff" d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12 C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"></path></svg> <span>Instagram</span>
+            </a></li>
+
+            <li><span class="kwaiIcon" ><a href="https://www.kwai.com/@vivendoarteecomtdh" target="_blank" ><img src="../icons/kwai.png" width="30px" height="30px"> <span class="kwaiText"> Kwai</span></a></span></li>
+          </ul>
+        </div>
+        <a href="">Vale do Jequitinhonha</a>
+    </div>
+    </div>
+  </header>
+
+<main>
+
+  <div class="slider">
+
+    <img src="img/img1.jpg" alt="Imagens do Vale do Jequitinhonha" title="Imagens do Vale do Jequitinhonha">
+
+    <img src="img/img2.jpg" alt="Imagens do Vale do Jequitinhonha" title="Imagens do Vale do Jequitinhonha">
+
+    <img src="img/img3.jpg" alt="Imagens do Vale do Jequitinhonha" title="Imagens do Vale do Jequitinhonha">
+
+    <img src="img/img4.jpg" alt="Imagens do Vale do Jequitinhonha" title="Imagens do Vale do Jequitinhonha">
+
+    <img src="img/img5.jpg" alt="Imagens do Vale do Jequitinhonha" title="Imagens do Vale do Jequitinhonha">
+
+    <img src="img/img6.jpg" alt="Imagens do Vale do Jequitinhonha" title="Imagens do Vale do Jequitinhonha">
+
+    <img src="img/img7.jpg" alt="Imagens do Vale do Jequitinhonha" title="Imagens do Vale do Jequitinhonha">
+
+    <img src="img/img8.jpg" alt="Imagens do Vale do Jequitinhonha" title="Imagens do Vale do Jequitinhonha">
+
+    <img src="img/img9.jpg" alt="Imagens do Vale do Jequitinhonha" title="Imagens do Vale do Jequitinhonha">
+
+    <img src="img/img10.jpg" alt="Imagens do Vale do Jequitinhonha" title="Imagens do Vale do Jequitinhonha">
+
+  </div>
+    <div class="navigation-button">
+      <span class="dot active" onclick="changeSlide(0)"></span>
+      <span class="dot" onclick="changeSlide(1)"></span>
+      <span class="dot" onclick="changeSlide(2)"></span>
+      <span class="dot" onclick="changeSlide(3)"></span>
+      <span class="dot" onclick="changeSlide(4)"></span>
+      <span class="dot" onclick="changeSlide(5)"></span>
+      <span class="dot" onclick="changeSlide(6)"></span>
+      <span class="dot" onclick="changeSlide(7)"></span>
+      <span class="dot" onclick="changeSlide(8)"></span>
+      <span class="dot" onclick="changeSlide(9)"></span>
+    </div>
+
+  <br><br>
+  <div class="history">
+  <div class="historyTitle">
+  <b><h2>História</h2></b>
+</div>
+<div class="text">
+    <p>
+      O Vale do Jequitinhonha costuma ser descrito a partir de vários elementos: a poeira, a aridez, o sol, o calor, o rio, por exemplo, vão formando seu ambiente. Os tropeiros, canoeiros, pescadores, artesãos, lavadeiras, romeiros são alguns de seus personagens sempre lembrados. A junção disso tudo compõe as suas muitas narrativas, forjadas tanto na dureza quanto na delicadeza da existência. São muitas as contradições, próprias de qualquer ambiente humano, muitas as diferenças. Mas tudo está lá, ao longo de um vale de muitos jequitinhonhas. <br><br>
+
+      Os olhos sobre as paisagens vão compondo um mapa de variados tons, das chapadas aos fundos dos vaus, das montanhas de pedra à grande cordilheira, das matas aos cerradões, dos campos rupestres à caatinga, dos diamantes e águas-marinhas ao granito e ao minério de ferro. Grandes distâncias a vencer, caminhos difíceis, casinhas longe de tudo, quase isoladas do resto do mundo, onde se habita um outro espaço-tempo. De outro lado, cidades agitadas pelas multiconexões, juventudes com ânsia de possibilidades. <br><br>
+      
+      E tem as ausências, tudo aquilo que no Vale não houve e não há. A longa lista das carências, ali onde a modernidade entendeu de fazer um desvio, embaralha o sentido das coisas, alimenta as incertezas. É onde a vida (ainda) tem de ser produzida pelas próprias mãos. Gerações se sucedem nessa manufatura. Ela é mais que um vestígio do passado, é algo que produz continuamente a vida, que a anuncia, pronuncia e denuncia, na tradução de seus paradoxos. <br><br>
+      
+      Neste cenário, a arte de fazer a vida ainda é algo que se aprende e se ensina, mesmo em contextos improváveis, como pequena flor no deserto. Por isso nos espanta essa beleza. Esses fazeres não estão separados das pequenas (mas poderosas) narrativas de cada pessoa. São algo tão variado quanto toda a paisagem, mas têm em comum as sensibilidades e os desejos das gentes, as inteligências populares, misturadas às devoções, às místicas e à vivência mágica dos seus mistérios. Artesãos e artesãs colocam ali sua própria história, e é essa a força criativa de um grande (hiper)texto – mãos e mente integradas.Teria este povo a vida nas mãos?<br><br><br>
+    <b>Fonte: </b><a href="https://www.ufmg.br/polojequitinhonha/o-vale/sobre-o-vale-do-jequitinhonha/" target="_blank">UFMG - Polo Jequitinhonha</a>
+  </p>
+</div>
+</div>
+<footer></footer>
+</main>
+</body>
+<script src="../script/script.js"></script>
+<script src="../script/slider.js"></script>
+</html>
