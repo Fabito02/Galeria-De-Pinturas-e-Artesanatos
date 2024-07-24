@@ -56,18 +56,21 @@ input[type="button"] {
 }
 
 input[type="button"] {
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   background-color: #889f6b;
-  font-weight: bold;
   width: auto;
-  height: 25px;
   color: #fff;
+  text-align: center;
   border: none;
   border-radius: 5px;
-  padding: 3px 14px;
+  padding: 5px 14px;
   transition: background-color 0.3s, color 0.3s;
   margin-top: 10px;
+}
+
+input[type="button"]:hover {
+  background-color: #576544;
 }
 
 .botao {
@@ -84,9 +87,6 @@ input[type="button"] {
   margin-top: 10px;
 }
 
-input[type="button"]:hover {
-  background-color: #576544;
-}
 
 button:hover {
   background-color: #815c39;

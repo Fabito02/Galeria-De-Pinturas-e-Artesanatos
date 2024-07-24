@@ -11,9 +11,7 @@
             window.history.back(); //redireciona para a página anterior caso o login seja bem sucedido
         })
         .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          console.error(errorCode, errorMessage);
+          const errorMessage = "Login ou senha incorretos."
           document.getElementById('message').textContent = errorMessage;
         });
     });
