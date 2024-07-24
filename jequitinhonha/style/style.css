@@ -380,8 +380,8 @@ footer {
     transform: translateY(0);
   }
   .slider {
-    width: 500px;
-    height: 225px;
+    width: 450px;
+    height: 205px;
     position: relative;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -390,8 +390,8 @@ footer {
     transition: width 0.2s, heigth 0.2s;
   }
   .slider img {
-    width: 500px;
-    height: 225px;
+    width: 450px;
+    height: 205px;
     position: absolute;
     top: 0;
     left: 0;
