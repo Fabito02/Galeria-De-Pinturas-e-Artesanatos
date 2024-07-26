@@ -6,6 +6,8 @@
   <title>Faça uma Encomenda</title>
   <link rel="stylesheet" href="style/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../favicon.png">
 </head>
 <body>
@@ -48,20 +50,20 @@
         <textarea id="descricao" name="text" placeholder="Descreva como deseja sua encomenda... (até 1000 caracteres)" required maxlength="1000"></textarea><br><br>
         <div class="space"></div>
         <h2>Seus Contatos</h2><br>
-        <b>*Nome: </b><br><input type="text" placeholder="Ex: Maria dos Santos Macedo" id="nomeCliente" required><br><br>
-        <b>*Email: </b><br><input type="email" placeholder="Ex: seu.email@example.com" id="emailCliente" required><br><br>
-        <b>*Telefone: </b><br><input type="tel" placeholder="Ex: (11) 234567890" id="telefoneCliente" required max=""><br><br>
+        <b>*Nome: </b><br><input class="input" type="text" placeholder="Ex: Maria dos Santos Macedo" id="nomeCliente" required><br><br>
+        <b>*Email: </b><br><input class="input" type="email" placeholder="Ex: seu.email@example.com" id="emailCliente" required><br><br>
+        <b>*Telefone: </b><br><input class="input" type="tel" placeholder="Ex: (11) 234567890" id="telefoneCliente" required max=""><br><br>
         <h2>Sua Localidade</h2><br>
-        <b>*Cidade: </b><br><input type="text" placeholder="Ex: Belo Horizonte" id="cidadeCliente" required><br><br>
-        <b>*Bairro: </b><br><input type="text" placeholder="Ex: Cidade Bela" id="bairroCliente" required><br><br>
-        <b>*Rua: </b><br><input type="text" placeholder="Ex: Tiradentes" id="ruaCliente"><br><br>
-        <b>*Número da Casa: </b><br><input type="number" placeholder="Ex: 235" id="casaCliente"><br><br>
+        <b>*Cidade: </b><br><input class="input" type="text" placeholder="Ex: Belo Horizonte" id="cidadeCliente" required><br><br>
+        <b>*Bairro: </b><br><input class="input" type="text" placeholder="Ex: Cidade Bela" id="bairroCliente" required><br><br>
+        <b>*Rua: </b><br><input class="input" type="text" placeholder="Ex: Tiradentes" id="ruaCliente"><br><br>
+        <b>*Número da Casa: </b><br><input class="input" type="number" placeholder="Ex: 235" id="casaCliente"><br><br>
         <h2>Imagem de Referência</h2>
         <h5>Caso julgue necessário o envio de uma imagem, coloque o seu link do Google Drive, Google Fotos ou qualquer outra plataforma que prefira no campo abaixo. Devido a problemas de compatibilidade, não é possível anexar arquivos diretamente.
         </h5>
-        <b>Link (Envio Recomendado): </b><br>
-        <input type="text" placeholder="Digite o Link aqui..." id="link"><br><br>
-        <input type="submit" value="Enviar Pedido" onclick="enviarPedido()" id="botaoEnviar">
+        <b>Link de imagem (Envio Recomendado): </b><br>
+        <input type="text" class="input" placeholder="Ex: https://photos.google.com/*" id="link"><br><br>
+        <button type="submit" class="submit" onclick="enviarPedido()" id="botaoEnviar">Enviar Pedido<i class="fas fa-paper-plane" style="font-size: 13px; margin-left: 5px;"></i></button>
       </form>
     </div>
     <footer></footer>

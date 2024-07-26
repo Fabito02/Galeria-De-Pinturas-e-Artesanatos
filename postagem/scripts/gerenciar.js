@@ -8,181 +8,221 @@ class Gerenciar {
     novaDescricaoImage() {
       const key = this.chave;
       const imagData = this.dados;
-      const newDescription = prompt('Digite a nova descrição (até 250 caracteres):').slice(0, 250);
-
-      if (newDescription === "") {
-        Swal.fire({
-          icon: "info",
-          title: "Espera aí!",
-          text: "Você precisa escrever algo para prosseguir.",
-          confirmButtonColor: "#a07146",
-          iconColor: "#b9895d",
-        });
-      } else if (newDescription === null) {
-        Swal.fire({
-          icon: "info",
-          title: "Operação cancelada!",
-          confirmButtonColor: "#a07146",
-          iconColor: "#b9895d",
-        });
-      } else {
-        db.ref('images/' + key).update({ description: newDescription })
-          .then(() => {
-            Swal.fire({
-              title: "Sucesso",
-              text: "Descrição atualizada com sucesso!",
-              confirmButtonColor: "#a07146",
-              icon: "success"
+      Swal.fire({
+        title: 'Digite a nova descrição (até 250 caracteres):',
+        input: 'text',
+        inputAttributes: {
+          maxlength: 250
+        },
+        showCancelButton: true,
+        confirmButtonText: 'Salvar',
+        confirmButtonColor: '#5caf4c',
+        cancelButtonColor: '#dd4141',
+        cancelButtonText: 'Cancelar',
+        showLoaderOnConfirm: true,
+        preConfirm: (newDescription) => {
+          if (!newDescription) {
+            Swal.showValidationMessage('Você precisa escrever algo para prosseguir.');
+          }
+          return newDescription;
+        }
+      }).then((result) => {
+        if (result.isConfirmed) {
+          const newDescription = result.value;
+          db.ref('images/' + key).update({ description: newDescription })
+            .then(() => {
+              Swal.fire({
+                title: 'Sucesso',
+                text: 'Descrição atualizada com sucesso!',
+                icon: 'success',
+                confirmButtonColor: '#a07146'
+              });
+              loadMedia(); // Recarrega as imagens
+            })
+            .catch((error) => {
+              console.error('Erro ao atualizar descrição:', error);
+              Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Algum erro ocorreu ao atualizar a descrição.',
+                confirmButtonColor: '#a07146'
+              });
             });
-            loadMedia(); // Recarrega as imagens
-          })
-          .catch((error) => {
-            console.error('Erro ao atualizar descrição:', error);
-            Swal.fire({
-              icon: "error",
-              title: "Oops...",
-              text: "Algum erro ocorreu ao atualizar a descrição.",
-              confirmButtonColor: "#a07146",
-            });
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+          Swal.fire({
+            icon: 'info',
+            title: 'Operação cancelada!',
+            confirmButtonColor: '#a07146',
+            iconColor: '#b9895d'
           });
-      }
+        }
+      });
     }
 
     deleteImage() {
   const key = this.chave;
   const imageData = this.dados;
-  const confirmDelete = confirm('Tem certeza de que deseja excluir esta imagem?');
-
-  if (!confirmDelete) {
-    return; // Cancela e não exclui
-  }
-
-  const fileUrl = imageData.fileUrl; // Assume que 'fileUrl' é a URL da imagem no Storage
-
-  // Deleta do Realtime Database
-  db.ref('images/' + key).remove().then(() => { 
+  Swal.fire({
+    title: 'Tem certeza de que deseja excluir esta postagem?',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#5caf4c',
+    cancelButtonColor: '#dd4141',
+    confirmButtonText: 'Sim, excluir!',
+    cancelButtonText: 'Cancelar'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      const fileUrl = imageData.fileUrl; // Assume que 'fileUrl' é a URL da imagem no Storage
     
-  // Deleta do Storage
-  const storageRef = firebase.storage().refFromURL(fileUrl);
+      // Deleta do Realtime Database
+      db.ref('images/' + key).remove().then(() => { 
+        
+      // Deleta do Storage
+      const storageRef = firebase.storage().refFromURL(fileUrl);
+    
+      storageRef.delete().then(() => {
+          Swal.fire({
+            title: "Sucesso",
+            text: "Postagem excluída com sucesso!",
+            confirmButtonColor: "#a07146",
+            icon: "success"
+          });
+          loadMedia(); // Recarrega
+        }).catch((error) => {
+          console.error('Erro ao excluir postagem:', error);
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Algum erro ocorreu ao excluir a postagem.",
+            confirmButtonColor: "#a07146",
+          });
+          loadMedia(); // Recarrega
+        });
+      }).catch((error) => {
+        console.error('Erro ao excluir postagem:', error);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Algum erro ocorreu ao excluir a postagem.",
+          confirmButtonColor: "#a07146",
+        });
+        loadMedia(); // Recarrega
+      });
+    } else {
+      return;
+    }
 
-  storageRef.delete().then(() => {
-      Swal.fire({
-        title: "Sucesso",
-        text: "Postagem excluída com sucesso!",
-        confirmButtonColor: "#a07146",
-        icon: "success"
-      });
-      loadMedia(); // Recarrega
-    }).catch((error) => {
-      console.error('Erro ao excluir postagem:', error);
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Algum erro ocorreu ao excluir a postagem.",
-        confirmButtonColor: "#a07146",
-      });
-      loadMedia(); // Recarrega
-    });
-  }).catch((error) => {
-    console.error('Erro ao excluir postagem:', error);
-    Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Algum erro ocorreu ao excluir a postagem.",
-      confirmButtonColor: "#a07146",
-    });
-    loadMedia(); // Recarrega
   });
+
 }
 
     novaDescricaoVideo() {
       const key = this.chave;
       const imagData = this.dados;
-      const newDescription = prompt('Digite a nova descrição (até 250 caracteres):').slice(0, 250);
-
-      if (newDescription === "") {
-        Swal.fire({
-          icon: "info",
-          title: "Espera aí!",
-          text: "Você precisa escrever algo para prosseguir.",
-          confirmButtonColor: "#a07146",
-          iconColor: "#b9895d",
-        });
-      } else if (newDescription === null) {
-        Swal.fire({
-          icon: "info",
-          title: "Operação cancelada!",
-          confirmButtonColor: "#a07146",
-          iconColor: "#b9895d",
-        });
-      } else {
-        db.ref('videos/' + key).update({ description: newDescription })
-          .then(() => {
-            Swal.fire({
-              title: "Sucesso",
-              text: "Descrição atualizada com sucesso!",
-              confirmButtonColor: "#a07146",
-              icon: "success"
+      Swal.fire({
+        title: 'Digite a nova descrição (até 250 caracteres):',
+        input: 'text',
+        inputAttributes: {
+          maxlength: 250
+        },
+        showCancelButton: true,
+        confirmButtonText: 'Salvar',
+        confirmButtonColor: '#5caf4c',
+        cancelButtonColor: '#dd4141',
+        cancelButtonText: 'Cancelar',
+        showLoaderOnConfirm: true,
+        preConfirm: (newDescription) => {
+          if (!newDescription) {
+            Swal.showValidationMessage('Você precisa escrever algo para prosseguir.');
+          }
+          return newDescription;
+        }
+      }).then((result) => {
+        if (result.isConfirmed) {
+          const newDescription = result.value;
+          db.ref('videos/' + key).update({ description: newDescription })
+            .then(() => {
+              Swal.fire({
+                title: 'Sucesso',
+                text: 'Descrição atualizada com sucesso!',
+                icon: 'success',
+                confirmButtonColor: '#a07146'
+              });
+              loadMedia(); // Recarrega
+            })
+            .catch((error) => {
+              console.error('Erro ao atualizar descrição:', error);
+              Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Algum erro ocorreu ao atualizar a descrição.',
+                confirmButtonColor: '#a07146'
+              });
             });
-            loadMedia(); // Recarrega
-          })
-          .catch((error) => {
-            console.error('Erro ao atualizar descrição:', error);
-            Swal.fire({
-              icon: "error",
-              title: "Oops...",
-              text: "Algum erro ocorreu ao atualizar a descrição.",
-              confirmButtonColor: "#a07146",
-            });
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+          Swal.fire({
+            icon: 'info',
+            title: 'Operação cancelada!',
+            confirmButtonColor: '#a07146',
+            iconColor: '#b9895d'
           });
-      }
-    }
+        }
+      });      
+}
 
-    deleteVideo() {
+deleteVideo() {
   const key = this.chave;
   const imageData = this.dados;
-  const confirmDelete = confirm('Tem certeza de que deseja excluir esta postagem?');
+  Swal.fire({
+    title: 'Tem certeza de que deseja excluir esta postagem?',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#5caf4c',
+    cancelButtonColor: '#dd4141',
+    confirmButtonText: 'Sim, excluir!',
+    cancelButtonText: 'Cancelar'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      const fileUrl = imageData.fileUrl; // Assume que 'fileUrl' é a URL do vídeo no Storage
 
-  if (!confirmDelete) {
-    return; // Cancela e não exclui
-  }
-
-  const fileUrl = imageData.fileUrl; // Assume que 'fileUrl' é a URL do vídeo no Storage
-
-  // Deleta do Realtime Database
-  db.ref('videos/' + key).remove().then(() => {
-
-  // Deleta do Storage
-  const storageRef = firebase.storage().refFromURL(fileUrl);
-  storageRef.delete().then(() => {
-
-      Swal.fire({
-        title: "Sucesso",
-        text: "Postagem excluída com sucesso!",
-        confirmButtonColor: "#a07146",
-        icon: "success"
+      // Deleta do Realtime Database
+      db.ref('videos/' + key).remove().then(() => {
+    
+      // Deleta do Storage
+      const storageRef = firebase.storage().refFromURL(fileUrl);
+      storageRef.delete().then(() => {
+    
+          Swal.fire({
+            title: "Sucesso",
+            text: "Postagem excluída com sucesso!",
+            confirmButtonColor: "#a07146",
+            icon: "success"
+          });
+          loadMedia(); // Recarrega
+        }).catch((error) => {
+          console.error('Erro ao excluir postagem:', error);
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Algum erro ocorreu ao excluir a postagem.",
+            confirmButtonColor: "#a07146",
+          });
+          loadMedia(); // Recarrega
+        });
+      }).catch((error) => {
+        console.error('Erro ao excluir postagem:', error);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Algum erro ocorreu ao excluir a postagem.",
+          confirmButtonColor: "#a07146",
+        });
+        loadMedia(); // Recarrega
       });
-      loadMedia(); // Recarrega
-    }).catch((error) => {
-      console.error('Erro ao excluir postagem:', error);
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Algum erro ocorreu ao excluir a postagem.",
-        confirmButtonColor: "#a07146",
-      });
-      loadMedia(); // Recarrega
-    });
-  }).catch((error) => {
-    console.error('Erro ao excluir postagem:', error);
-    Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Algum erro ocorreu ao excluir a postagem.",
-      confirmButtonColor: "#a07146",
-    });
-    loadMedia(); // Recarrega
-  });
+    } else {
+      return;
+    }
+  })
 }
 
     logout() {
@@ -193,7 +233,12 @@ class Gerenciar {
         })
         .catch((error) => {
           console.error('Erro ao fazer logout:', error);
-          alert('Ocorreu um erro ao fazer logout.');
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Algum erro ocorreu ao fazer logout.",
+            confirmButtonColor: "#a07146",
+          });
         });
     }
   }
@@ -207,7 +252,7 @@ class Gerenciar {
     }
   });
 
-  // Função para carregar as imagens
+  // Função para carregar as postagens
   function loadMedia() {
     const gallery = document.getElementById('gallery');
     gallery.innerHTML = ''; // Limpa o conteúdo da galeria
@@ -230,16 +275,16 @@ class Gerenciar {
 
         // Adiciona os botões de edição e remoção
         const editButton = document.createElement('button');
-        editButton.textContent = 'Editar';
+        editButton.innerHTML = 'Editar <i class="fas fa-edit"></i>';
         editButton.addEventListener('click', () => editImage(imageKey, imageData));
         imageElement.appendChild(editButton);
-        editButton.classList.add('botao');
+        editButton.classList.add('editar');
 
         const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Excluir';
+        deleteButton.innerHTML = 'Excluir <i class="fas fa-trash-alt"></i>';
         deleteButton.addEventListener('click', () => deleteImage(imageKey, imageData));
         imageElement.appendChild(deleteButton);
-        deleteButton.classList.add('botao');
+        deleteButton.classList.add('deletar');
 
         gallery.insertBefore(imageElement, gallery.firstChild);
       });
@@ -263,16 +308,16 @@ class Gerenciar {
 
           // Adiciona os botões de edição e remoção
           const editButton = document.createElement('button');
-          editButton.textContent = 'Editar';
+          editButton.innerHTML = 'Editar <i class="fas fa-edit"></i>';
           editButton.addEventListener('click', () => editVideo(videoKey, videoData));
           videoElement.appendChild(editButton);
-          editButton.classList.add('botao');
+          editButton.classList.add('editar');
 
           const deleteButton = document.createElement('button');
-          deleteButton.textContent = 'Excluir';
+          deleteButton.innerHTML = 'Excluir <i class="fas fa-trash-alt"></i>';
           deleteButton.addEventListener('click', () => deleteVideo(videoKey, videoData));
           videoElement.appendChild(deleteButton);
-          deleteButton.classList.add('botao');
+          deleteButton.classList.add('deletar');
 
           gallery.insertBefore(videoElement, gallery.firstChild);
         });

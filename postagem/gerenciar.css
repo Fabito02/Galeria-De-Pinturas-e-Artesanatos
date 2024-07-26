@@ -4,9 +4,21 @@ body {
   color: #53392a;
   margin: 0;
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+}
 
 h1 {
   text-align: center;
+}
+
+.swal2-popup .swal2-actions .swal2-styled {
+  border-radius: 8px; 
+}
+
+.swal2-popup {
+  border-radius: 20px; 
 }
 
 .gallery, .galleryVideo {
@@ -28,9 +40,9 @@ h1 {
 }
 
 header {
-  height: 90px;
+  font-weight: bolder;
   background-color: #f5e2ce;
-  padding: 10px;
+  padding: 1px;
 }
 
 footer {
@@ -55,10 +67,12 @@ input[type="button"] {
   cursor: pointer;
 }
 
-input[type="button"] {
+.topButtons {
+  font-weight: bold;
+  margin: 3px;
   font-size: 14px;
   cursor: pointer;
-  background-color: #889f6b;
+  background-color: #85aa65;
   width: auto;
   color: #fff;
   text-align: center;
@@ -69,12 +83,13 @@ input[type="button"] {
   margin-top: 10px;
 }
 
-input[type="button"]:hover {
-  background-color: #576544;
+.topButtons:hover {
+  background-color: #708d57;
 }
 
-.botao {
-  background-color: #af7c4c;
+.editar {
+  cursor: pointer;
+  background-color: #5caf4c;
   font-weight: bold;
   width: auto;
   height: 25px;
@@ -87,9 +102,27 @@ input[type="button"]:hover {
   margin-top: 10px;
 }
 
+.deletar {
+  cursor: pointer;
+  background-color: #dd4141;
+  font-weight: bold;
+  width: auto;
+  height: 25px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 14px;
+  margin: 0 7.5px 0 7.5px;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 10px;
+}
 
-button:hover {
-  background-color: #815c39;
+.editar:hover {
+  background-color: #509343;
+}
+
+.deletar:hover {
+  background-color: #b23a3a;
 }
 
 h4 {

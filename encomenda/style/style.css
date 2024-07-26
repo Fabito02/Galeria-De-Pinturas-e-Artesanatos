@@ -5,6 +5,10 @@ body {
   color: #53392a;
   margin: 0;
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+}
 
 ::selection {
   background-color: rgb(178, 195, 157);
@@ -69,19 +73,33 @@ header {
   text-align: center;
   transition: background-color 0.5s;
 }
-input[type="email"], input[type="tel"], input[type="text"], input[type="number"] {
+
+.swal2-popup .swal2-actions .swal2-styled {
+  border-radius: 8px; 
+}
+
+.swal2-popup {
+  border-radius: 20px; 
+}
+
+.input {
     border-radius: 7px;
     border-style: none;
     padding: 5px;
     width: 200px;
     outline: none;
-    transition: box-shadow 0.25s, transform 0.10s;
+    transition: box-shadow 0.25s, transform 0.10s, background-color 0.25s;
     margin-top: 8px;
+    box-shadow: 0px 0px 7px rgba(94, 94, 94, 0.5);
 }
 
-input[type="email"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="number"]:focus {
+.input:focus {
   transform: scale(1.02);
-  box-shadow: 0px 0px 10px rgba(73, 73, 73, 0.5);
+  box-shadow: 0px 0px 15px rgba(40, 40, 40, 0.5);
+}
+
+.input:hover {
+  background-color: #f4f4f4;
 }
 
 textarea {
@@ -93,13 +111,18 @@ textarea {
   height: 80px;
   outline: none;
   border-radius: 12px;
-  transition: box-shadow 0.25s, width 0.25s, heigth 0.25s, border-radius 0.25s;
+  box-shadow: 0px 0px 7px rgba(94, 94, 94, 0.5);
+  transition: box-shadow 0.25s, width 0.25s, heigth 0.25s, border-radius 0.25s, background-color 0.25s;
 }
 
 textarea:focus {
 width: 450px;
 height: 250px;
-box-shadow: 0px 0px 10px rgba(77, 77, 77, 0.5);
+box-shadow: 0px 0px 15px rgba(40, 40, 40, 0.5);
+}
+
+textarea:hover {
+  background-color: #f4f4f4;
 }
 
 .space {
@@ -116,10 +139,9 @@ h2 {
 }
 
 h1 {
-    font-family: 'Inter';
-    font-size: 42px;
+    font-size: 44px;
+    font-weight: bold;
     color: #50372a;
-    font-style: initial;
     text-align: center;
   }
 
@@ -139,11 +161,11 @@ h1 {
   align-items: center;
   position: relative;
 }
-.form input[type="button"], .form input[type="submit"] {
+.submit {
    background-color: #a07146;
    color: #fff;
    border: none;
-   padding: 5px 10px;
+   padding: 6px 10px;
    font-size: 15.5px;
    cursor: pointer;
    border-radius: 5px;
@@ -159,7 +181,7 @@ h1 {
    transition: background-color 0.2s;
  }
  
-.form input[type="button"]:hover, .form input[type="submit"]:hover {
+.submit:hover {
     background-color: #66492d;
   }
 
@@ -355,13 +377,11 @@ header {
     }
     textarea {
       width: 61vw;
-      transition: box-shadow 0.25s, width 0.25s, heigth 0.25s, border-radius 0.25s;
       margin-right: 15px;
     }
     textarea:focus {
       width: 71vw;
       height: 250px;
-      box-shadow: 0px 0px 10px rgba(77, 77, 77, 0.5);
       }
     .botoes img {
       margin: 0;

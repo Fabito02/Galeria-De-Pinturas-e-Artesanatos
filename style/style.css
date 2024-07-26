@@ -6,11 +6,14 @@ body {
 ::selection {
   background-color: rgb(178, 195, 157);
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+}
+
 header {
   padding: 10px 0;
   text-align: center;
-  height: 63px;
-  font-family: 'Inter';
   align-items: center;
   border-color: #8a604b;
   background-color: #f5e2ce;
@@ -36,7 +39,6 @@ header {
   font-size: 15.5px;
   cursor: pointer;
   border-radius: 8px;
-  font-family: 'Inter';
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -66,7 +68,6 @@ h2 {
 }
 
 .texto h1 {
-  font-family: 'Inter';
   font-size: 36px;
   color: #8a604b;
   font-style: initial;
@@ -74,7 +75,6 @@ h2 {
   margin-left: 22%;
 }
 .texto p {
-  font-family: 'Inter';
   color: #5c5c5c;
   font-size: 20px;
   text-align: left;
@@ -92,7 +92,6 @@ h2 {
 }
 .miniBio {
   font-size: 15.5px;
-  font-family: 'Inter';
   margin-left: 30px;
   margin-right: 55px;
   color: #16100c;
@@ -125,10 +124,11 @@ h2 {
   margin: 40px 30px 30px 30px;
 }
 .bioTitle {
-  font-weight: bold;
+  font-weight: 700;
   text-align: left;
   margin-left: 30px;
-  font-size: 36px;
+  font-size: 42px;
+  font-family: 'Work Sans', sans-serif;
   color: #5e6b4b;
   margin-top: 40px;
 }

@@ -6,6 +6,10 @@ body {
 ::selection {
   background-color: rgb(178, 195, 157);
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+}
 :link {
   color: #8fa07a;
 }

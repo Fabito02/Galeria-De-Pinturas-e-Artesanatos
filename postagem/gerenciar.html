@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gerenciar Postagens</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="gerenciar.css">
   <link rel="icon" type="image/png" href="../favicon.png">
 </head>
@@ -12,9 +14,17 @@
   <div class="gallery-container">
     <header><h1>GERENCIAR SUAS POSTAGENS</h1></header>
     <div class="bt">
-      <input type="button" value="Abrir Galeria" onclick="window.location.href='../gallery/'">
-      <input type="button" value="Fazer uma Postagem" onclick="window.location.href='../postagem'">
-      <input type="button" value="Sair da conta" onclick="logout()">
+      <button type="button" class="topButtons" onclick="window.location.href='../gallery/'">
+        <i class="fas fa-images"></i> Abrir Galeria
+    </button>
+    
+    <button type="button" class="topButtons" onclick="window.location.href='../postagem'">
+        <i class="fas fa-pen"></i> Fazer uma Postagem
+    </button>
+    
+    <button type="button" class="topButtons" onclick="logout()">
+        <i class="fas fa-sign-out-alt"></i> Sair da conta
+    </button>
     </div>
     <div id="gallery" class="gallery">
       <!-- Onde vai exibir as imagens -->
