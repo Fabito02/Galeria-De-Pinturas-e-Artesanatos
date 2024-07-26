@@ -6,6 +6,7 @@
   <title>Sobre o Vale do Jequitinhonha</title>
   <link rel="stylesheet" href="style/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../favicon.png">
   
@@ -22,7 +23,9 @@
         <span class="barrinha-menu"></span>
     </div>
     <div class="dropdown" id="dropdown">
-            <input type="button" value="Galeria de Arte" onclick="window.location.href='../gallery/'">
+        <button class="galleryButton" onclick="window.location.href='../gallery/'">
+        <i class="fas fa-images" style="margin-right: 5px;"></i> Minha Galeria
+    </button>
         <a href="../">Página Inicial</a>
         <a href="../encomenda/">Fazer Encomenda</a>
         <a onclick="mostrarRedesSociais()" id="setaAnimada">Redes Sociais <div class="arrow-down" style="display: inline-block;"></div></a>
@@ -82,7 +85,7 @@
   <br><br>
   <div class="history">
   <div class="historyTitle">
-  <b><h2>História</h2></b>
+  <div class="bar"></div><b><h2>História</h2></b>
 </div>
 <div class="text">
     <p>

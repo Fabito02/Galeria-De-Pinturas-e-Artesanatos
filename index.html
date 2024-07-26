@@ -6,6 +6,7 @@
   <title>Artes de Gleiciane Lima</title>
   <link rel="stylesheet" href="style/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 
@@ -26,7 +27,9 @@
       <span class="barrinha-menu"></span>
   </div>
   <div class="dropdown" id="dropdown"> 
-    <input type="button" value="Galeria de Arte" onclick="window.location.href='gallery/'">
+        <button class="galleryButton" onclick="window.location.href='gallery/'">
+        <i class="fas fa-images" style="margin-right: 5px;"></i> Minha Galeria
+    </button>
       <a href="">Página Inicial</a>
       <a href="encomenda/">Fazer Encomenda</a>
       <a onclick="mostrarRedesSociais()" id="setaAnimada">Redes Sociais <div class="arrow-down" style="display: inline-block;"></div></a>
@@ -87,7 +90,7 @@
 
   <br><br>
   <div class="bio">
-  <div class="bioTitle">
+    <div class="bioTitle"><div class="bar"></div>
   Conheça meu Trabalho
 </div><br>
 <div class="miniBio">
@@ -110,12 +113,9 @@
       
       <div class="experiencia"><img src="img/experiencia.png"></div><br>
       <h1>A Arte de Pintar é Para Todos</h1>
-      O objetivo é ensinar a quem tiver interesse em começar a pintar, para que todos possam aproveitar os ótimos benefícios que a pintura oferece. Além disso, quero mostrar a arte de pintar como uma possível fonte de renda para famílias carentes, destacando como essa atividade pode ser transformada em uma alternativa econômica viável. <br>
-<div class="galeria">
-<p>
-</p>
-    </div>
-</div>
+      O objetivo é ensinar a quem tiver interesse em começar a pintar, para que todos possam aproveitar os ótimos benefícios que a pintura oferece. Além disso, quero mostrar a arte de pintar como uma possível fonte de renda para famílias carentes, destacando como essa atividade pode ser transformada em uma alternativa econômica viável. <br><br>
+      <button class="btGaleria" onclick="window.location.href='gallery/'"><i class="fas fa-images" style="margin-right: 5px;"></i>Acessar Minha Galeria</button>
+</div> 
 </main>
 <footer></footer>
 </body>

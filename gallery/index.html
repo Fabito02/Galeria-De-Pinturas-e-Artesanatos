@@ -20,7 +20,9 @@
         <span class="barrinha-menu"></span>
     </div>
     <div class="dropdown" id="dropdown">
-            <input type="button" value="Galeria de Arte" onclick="window.location.href=''">
+                <button class="galleryButton" onclick="window.location.href='../gallery/'">
+        <i class="fas fa-images" style="margin-right: 5px;"></i> Minha Galeria
+    </button>
         <a href="../">Página Inicial</a>
         <a href="../encomenda/">Fazer Encomenda</a>
         <a onclick="mostrarRedesSociais()" id="setaAnimada">Redes Sociais <div class="arrow-down" style="display: inline-block;"></div></a>
@@ -43,8 +45,11 @@
   <br><br>
   <div class="history">
   <div class="historyTitle">
-  <b><h2>Galeria</h2></b>
-  <span class="selectMediaType"><button class="selectMediaTypeBt" id="imageBt" onclick="mostrarImagens()">Imagens</button><button class="selectMediaTypeBt" onclick="mostrarVideos()">Vídeos</button></span>
+  <div class="titleAndBar">
+  <div class="bar"></div><b><h2>Galeria</h2></b></div>
+  <span class="selectMediaType">
+    <button class="selectMediaTypeBt" id="imageBt" onclick="mostrarImagens()"><i class="fas fa-camera" style="margin-right: 5px;"></i> Imagens</button>
+    <button class="selectMediaTypeBt" onclick="mostrarVideos()"><i class="fas fa-video" style="margin-right: 5px;"></i> Vídeos</button></span>
   <div class="gallery" id="gallery">
   </div>
   <div class="gallery" id="galleryVideo" style="display: none;">

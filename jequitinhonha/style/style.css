@@ -25,6 +25,13 @@ header {
   border-color: #8a604b;
   background-color: #f5e2ce;
 }
+.bar {
+  transform: translateX(-5px);
+  border-radius: 6px;
+  background-color: #af907b;
+  height: 30px;
+  width: 6px;
+}
 .botoes {
   display: flex;
   justify-content: space-between;
@@ -37,7 +44,7 @@ header {
   flex-grow: 1;
 }
 
-.botoes input[type="button"] {
+.galleryButton {
   background-color: #af7c4c;
   color: #fff;
   border: none;
@@ -58,7 +65,7 @@ header {
 }
 
 
-.botoes input[type="button"]:hover {
+.galleryButton:hover {
   background-color: #815c39;
   transition: all 0.5s;
 }
@@ -88,12 +95,14 @@ header {
   justify-content: center;
 }
 .historyTitle {
+  transform: translateY(10px);
+  display: flex;
+  align-items: center;
   font-weight: bold;
   text-align: left;
   margin-left: 30px;
   font-size: 22px;
   color: #4b352a;
-  margin-top: 40px;
 }
 .text {
   font-size: 16px;

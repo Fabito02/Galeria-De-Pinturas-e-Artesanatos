@@ -54,7 +54,7 @@ header {
 .botoes img:hover {
   background-color: #6a2f0821;
 }
-.botoes input[type="button"] {
+.galleryButton {
   background-color: #af7c4c;
   color: #fff;
   border: none;
@@ -71,6 +71,11 @@ header {
   width: calc(100% - 16px);
   margin-top: 10px;
   text-align: center;
+  transition: background-color 0.5s;
+}
+
+.galleryButton:hover {
+  background-color: #815c39;
   transition: background-color 0.5s;
 }
 
@@ -145,10 +150,6 @@ h1 {
     text-align: center;
   }
 
-.botoes input[type="button"]:hover {
-  background-color: #815c39;
-  transition: background-color 0.5s;
-}
 .form {
   background-color: rgb(241, 213, 179);
   border-radius: 8px;
@@ -344,7 +345,7 @@ header {
   height: auto;
 }
   h1{
-    font-size: 27px;
+    font-size: 32px;
   }
   h2 {
     font-size: 20px;

@@ -63,7 +63,7 @@
           console.log('Arquivo enviado com sucesso: ', downloadURL);
           Swal.fire({
             title: "Sucesso",
-            text: "O Arquivo foi enviado com Sucesso!",
+            text: "A postagem foi enviada com sucesso!",
             confirmButtonColor: "#a07146",
             icon: "success"
           });

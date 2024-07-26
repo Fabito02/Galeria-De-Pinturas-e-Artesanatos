@@ -21,7 +21,9 @@
         <span class="barrinha-menu"></span>
       </div>
       <div class="dropdown" id="dropdown"> 
-        <input type="button" value="Galeria de Arte" onclick="window.location.href='../gallery/'">
+    <button class="galleryButton" onclick="window.location.href='../gallery/'">
+        <i class="fas fa-images" style="margin-right: 5px;"></i> Minha Galeria
+    </button>
         <a href="../">Página Inicial</a>
         <a href="">Fazer Encomenda</a>
         <a onclick="mostrarRedesSociais()" id="setaAnimada">Redes Sociais <div class="arrow-down" style="display: inline-block;"></div></a>
@@ -43,7 +45,7 @@
   <main>
     <div class="form" id="novoPedido">
       <form action="/upload" method="post" enctype="multipart/form-data">
-        <h1>Faça uma Encomenda</h1><br>
+        <span class="underline"><h1>Faça Sua Encomenda</h1></span><br>
         <h5>"*" Indica um campo obrigatório</h5>
         <h2>Descreva Seu Pedido</h2>
         <b>*Descrição: </b><br><br>

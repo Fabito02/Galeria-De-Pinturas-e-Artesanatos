@@ -31,7 +31,7 @@ header {
   margin-left: 32px;
   flex-grow: 1;
 }
-.botoes input[type="button"] {
+.galleryButton {
   background-color: #af7c4c;
   color: #fff;
   border: none;
@@ -62,7 +62,7 @@ h2 {
 .item-list {
   margin-left: 40px;
 }
-.botoes input[type="button"]:hover {
+.galleryButton:hover {
   background-color: #815c39;
   transition: all 0.5s;
 }
@@ -123,14 +123,37 @@ h2 {
   margin-top: 40px;
   margin: 40px 30px 30px 30px;
 }
+
 .bioTitle {
   font-weight: 700;
-  text-align: left;
-  margin-left: 30px;
-  font-size: 42px;
+  text-align: center;
+  font-size: 44px;
+  margin-left: 20px;
+  margin-right: 20px;
   font-family: 'Work Sans', sans-serif;
-  color: #5e6b4b;
+  color: #5d6a4a;
   margin-top: 40px;
+}
+.btGaleria {
+  transform: translateX(-10px);
+  margin-bottom: 30px;
+  background-color: #798a61;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  font-family: 'Inter';
+  font-weight: bold;
+  margin-left: 8px;
+  margin-top: 10px;
+  align-items: center;
+  text-align: center;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+.btGaleria:hover {
+  background-color: #5d6a4a;
 }
 footer {
   border-radius: 8px;
@@ -387,7 +410,6 @@ footer {
       align-items: center;
   }
   .bioTitle {
-      margin-left: 16px;
   }
   .texto h1 {
       font-size: 24px;
