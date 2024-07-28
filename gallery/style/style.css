@@ -275,6 +275,7 @@ footer {
   margin: 5px;
   border-radius: 16px;
   cursor: pointer;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.255);
   transition: transform 0.2s ease-in-out;
 }
 .image:hover {
@@ -359,6 +360,7 @@ footer {
 }
 
 .video video {
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.255);
   width: 100%;
   border-radius: 12px;
   height: auto;
@@ -451,6 +453,7 @@ main {
   transition: background-color 0.25s ease, transform 0.1s ease-in-out;
 }
 .modal-conteudo {
+  box-shadow: 0 0px 25px rgba(0, 0, 0, 0.425);
   max-height: 80vh;
   max-width: 80vw;
 }
