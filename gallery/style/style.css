@@ -498,8 +498,8 @@ img {
   .image {
     position: relative;
     border-radius: 16px;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     transition: opacity 0.3s ease-in-out;
     display: flex;
     justify-content: center;
