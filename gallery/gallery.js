@@ -80,17 +80,18 @@ function loadVideos() {
 
 document.addEventListener('DOMContentLoaded', () => {
   loadImages();
-  loadVideos(); 
 });
 
 
 function mostrarImagens() {
-  location.reload()
+  gallery = document.getElementById('gallery').style.display = "flex";
+  galleryVideos = document.getElementById('galleryVideo').style.display = "none";
+  loadImages();
 }
 
 function mostrarVideos() {
   gallery = document.getElementById('gallery').style.display = "none";
-  galleryVideos = document.getElementById('galleryVideo').style.display = "block";
+  galleryVideos = document.getElementById('galleryVideo').style.display = "flex";
   loadVideos();
 }
 
@@ -99,15 +100,25 @@ var isMobile = window.matchMedia("(max-width: 720px)").matches;
     if (isMobile != true) { 
         // Função para abrir o modal com a imagem clicada
         function abrirModal(fileUrl) {
+          let main = document.querySelector("main")
           let modal = document.getElementById("modal");
           let imagemModal = document.getElementById("imagem-modal");
+          main.style.filter = "blur(7px)"
           imagemModal.src = fileUrl;
-          modal.style.display = "block";
+          modal.style.display = "flex";
         }
     }
 
 // Função pra fechar o modal
 function fecharModal() {
-  var modal = document.getElementById("modal");
+  let main = document.querySelector("main")
+  let modal = document.getElementById("modal");
   modal.style.display = "none";
+  main.style.filter = "blur(0px)"
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        fecharModal();
+    }
 }

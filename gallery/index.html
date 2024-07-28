@@ -11,6 +11,7 @@
   <link rel="icon" type="image/png" href="../favicon.png">
 </head>
 <body>
+<main>
 <header>
     <div class="botoes">
         <img src="../img/logo.png" alt="Imagem 1" onclick="window.location.href='../'">
@@ -40,7 +41,6 @@
     </div>
     </div>
   </header>
-<main>
 
   <br><br>
   <div class="history">
@@ -53,15 +53,16 @@
   <div class="gallery" id="gallery">
   </div>
   <div class="gallery" id="galleryVideo" style="display: none;">
-  </div>
-  <div id="modal" class="modal">
-    <span class="fechar" onclick="fecharModal()"><i class="fas fa-times"></i></span>
-    <img class="modal-conteudo" id="imagem-modal">
-  </div>
-    
+  </div>    
 </main>
 <footer></footer>
+  <div id="modal" class="modal" style="display: none;">
+    <div class="fechar" onclick="fecharModal()"><i class="fas fa-times"></i></div>
+    <img class="modal-conteudo" id="imagem-modal">
+  </div>
 
+
+</body>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
@@ -69,5 +70,4 @@
 <script src="../firebase-config.js"></script>
 <script src="../script/script.js"></script>
 <script src="gallery.js"></script>
-</body>
 </html>

@@ -166,7 +166,7 @@ header {
   right: 20px;
   background-color: #f3e1d0;
   box-shadow: 0px 8px 16px 0px #00000067;
-  z-index: 1000; /* Aumentar z-index */
+  z-index: 900;
   margin-top: 370px;
   border-radius: 8px;
   transform: translateY(-10px);
@@ -266,6 +266,7 @@ footer {
 
 /* Estilo para o container das imagens */
 .image {
+  user-select: none;
   width: 250px;
   height: 250px;
   overflow: hidden;
@@ -273,7 +274,16 @@ footer {
   margin: 5px;
   border-radius: 16px;
   cursor: pointer;
+  transition: transform 0.2s ease-in-out;
 }
+.image:hover {
+  transform: scale(1.05);
+}
+
+.image:active {
+  transform: scale(0.9);
+}
+
 
 .overlay {
   position: absolute;
@@ -344,7 +354,7 @@ footer {
 
 .video {
   transform: translateX(max-width);
-  width: calc(33.3% - 20px);
+  max-width: 500px;
 }
 
 .video video {
@@ -397,7 +407,7 @@ footer {
 
 
 .text {
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   color: #f3f3f3;
   margin: 0 auto;
@@ -408,44 +418,51 @@ footer {
 
 
 /* Estilos para o modal */
+main {
+  transition: filter 0.3s;
+}
 .modal {
-  display: none;
+  align-items: center;
+  justify-content: center;
   position: fixed;
-  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   overflow: auto;
-  background-color: rgba(0,0,0,0.9);
-  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.622);
+  z-index: 999;
 }
 
 .fechar {
-  margin-top: 5px;
-  margin-right: 5px;
-  color: #aaa;
-  float: right;
-  font-size: 32px;
-  font-weight: bold;
-  margin-right: 25px;
-  user-select: none;
-  z-index: 1000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: white;
+  height: 35px;
+  width: 35px;
+  font-size: 28px;
+  position: fixed;
+  color: rgb(116, 83, 63);
+  transform: translateY(calc(-50vh + 45px)) translateX(calc(50vw - 45px));
+  transition: background-color 0.25s ease, transform 0.1s ease-in-out;
 }
 .modal-conteudo {
-  max-height: 90vh;
-  max-width: 95vh;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  max-height: 80vh;
+  max-width: 80vw;
 }
 
-.fechar:hover, .fechar:focus {
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer;
+.fechar:hover {
+  color: rgb(82, 60, 46);
+  background-color: #d7d7d7;
 }
+
+.fechar:active {
+  transform: translateY(calc(-50vh + 45px)) translateX(calc(50vw - 45px)) scale(0.9);
+}
+
 img {
   border-radius: 12px;
 } 
@@ -481,6 +498,8 @@ img {
   .image {
     position: relative;
     border-radius: 16px;
+    margin-top: 15px;
+    margin-bottom: 10px;
     transition: opacity 0.3s ease-in-out;
     display: flex;
     justify-content: center;
@@ -488,6 +507,15 @@ img {
     width: auto;
     height: auto;
     transform: translateX(-7px);
+    transition: transform 0.25s ease-in-out;
+  }
+
+  .image:active {
+    transform: translateX(-7px) scale(1.05);
+  }
+
+  .image:hover {
+    transform: translateX(-7px) scale(1.05);
   }
   
   .image img {
@@ -544,8 +572,6 @@ img {
     max-width: 85%;
     word-wrap: break-word;
   }
-
-  /* Estilos adicionados para o @media (max-width: 480px) */
 
   .image {
     flex: 1 1 calc(100% - 16px); /* 1 imagem por linha */
