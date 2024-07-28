@@ -24,6 +24,7 @@ header {
   align-items: center;
   border-color: #8a604b;
   background-color: #f5e2ce;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.138);
 }
 .bar {
   transform: translateX(-5px);

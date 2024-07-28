@@ -43,6 +43,7 @@ header {
   font-weight: bolder;
   background-color: #f5e2ce;
   padding: 1px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.138);
 }
 
 footer {
