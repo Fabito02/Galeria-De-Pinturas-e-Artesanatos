@@ -219,7 +219,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     border-radius: 16px;
-    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.104);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.381);
   }
   
   .slider img {
