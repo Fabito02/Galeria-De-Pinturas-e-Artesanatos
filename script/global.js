@@ -50,3 +50,18 @@ function mostrarRedesSociais() {
 function toggleSocial() {
     social.classList.toggle("active");
 }
+
+function primeiraParte() {
+    document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
+}
+
+function handleScroll() {
+    const returnTop = document.getElementById('return');
+    if (window.scrollY > 0) {
+        returnTop.style.transform = 'translateY(0px)';
+    } else {
+        returnTop.style.transform = 'translateY(80px)';
+    }
+}
+
+window.addEventListener('scroll', handleScroll);
