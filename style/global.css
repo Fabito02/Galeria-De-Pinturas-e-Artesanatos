@@ -309,14 +309,14 @@ body {
   
     .slider {
       width: 450px;
-      height: 205px;
+      height: 215px;
       margin-top: 30px;
       margin-bottom: 10px;
     }
   
     .slider img {
       width: 450px;
-      height: 205px;
+      height: 215px;
     }
   
     .botoes img {
@@ -379,14 +379,14 @@ body {
   @media (max-width: 480px) {
     .slider {
       width: 330px;
-      height: 150px;
+      height: 160px;
       margin-top: 30px;
       margin-bottom: 10px;
     }
   
     .slider img {
       width: 330px;
-      height: 150px;
+      height: 160px;
     }
   }
   
