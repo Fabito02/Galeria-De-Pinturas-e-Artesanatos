@@ -174,7 +174,7 @@ h4 {
   }
 
   h4 {
-    background-color: rgb(238, 216, 186);
+    background-color: rgba(226, 192, 144, 0.329);
     padding: 10px;
     border-radius: 5px;
     width: max-content;
