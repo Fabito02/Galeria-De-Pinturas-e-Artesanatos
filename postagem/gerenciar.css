@@ -13,14 +13,6 @@ h1 {
   text-align: center;
 }
 
-.swal2-popup .swal2-actions .swal2-styled {
-  border-radius: 8px; 
-}
-
-.swal2-popup {
-  border-radius: 20px; 
-}
-
 .gallery, .galleryVideo {
   margin-top: 120px;  
   display: flex;
@@ -39,12 +31,6 @@ h1 {
   align-items: center;
 }
 
-header {
-  font-weight: bolder;
-  background-color: #f5e2ce;
-  padding: 1px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.138);
-}
 
 footer {
   height: 80px;
@@ -174,7 +160,7 @@ h4 {
   }
 
   h4 {
-    background-color: rgba(226, 192, 144, 0.329);
+    background-color: #f4e5cf;
     padding: 10px;
     border-radius: 5px;
     width: max-content;
