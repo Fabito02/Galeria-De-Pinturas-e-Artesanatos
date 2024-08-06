@@ -52,7 +52,7 @@ function toggleSocial() {
 }
 
 function primeiraParte() {
-    document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('body').scrollIntoView({ behavior: 'smooth' });
 }
 
 function handleScroll() {

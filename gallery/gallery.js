@@ -100,10 +100,8 @@ var isMobile = window.matchMedia("(max-width: 720px)").matches;
     if (isMobile != true) { 
         // Função para abrir o modal com a imagem clicada
         function abrirModal(fileUrl) {
-          let main = document.querySelector("main")
           let modal = document.getElementById("modal");
           let imagemModal = document.getElementById("imagem-modal");
-          main.style.filter = "blur(7px)"
           imagemModal.src = fileUrl;
           modal.style.display = "flex";
         }
@@ -111,10 +109,8 @@ var isMobile = window.matchMedia("(max-width: 720px)").matches;
 
 // Função pra fechar o modal
 function fecharModal() {
-  let main = document.querySelector("main")
   let modal = document.getElementById("modal");
   modal.style.display = "none";
-  main.style.filter = "blur(0px)"
 }
 
 window.onclick = function(event) {
