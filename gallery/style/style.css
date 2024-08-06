@@ -211,7 +211,7 @@ main {
 }
 
 .modal {
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(10px);
   align-items: center;
   justify-content: center;
   position: fixed;
