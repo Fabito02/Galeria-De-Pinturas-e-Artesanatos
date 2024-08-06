@@ -379,6 +379,19 @@ footer {
     height: auto;
   }
 
+  .botoes .logo {
+    max-width: 130px;
+    padding: 10px;
+  }
+
+  .menu {
+    margin-right: 10px;
+  }
+  
+  .botoes .logo:hover {
+    background-color: rgba(199, 177, 143, 0.581);
+  }
+
   .slider {
     width: 450px;
     height: 215px;
@@ -391,33 +404,12 @@ footer {
     height: 215px;
   }
 
-  .botoes img {
-    margin: 0;
-    padding: 5px;
-  }
-
-  .botoes {
-    flex-direction: column;
-  }
-
-  .botoes .texto {
-    margin-left: 16px;
-    margin-bottom: 10px;
-  }
-
-  .menu {
-    margin-bottom: 15px;
-    margin-right: auto;
-    margin-left: 10px;
-    z-index: 1;
-  }
-
   .dropdown {
     opacity: 0;
     left: 20px;
     top: -110px;
     z-index: 1000;
-    margin-top: 230px;
+    margin-top: 200px;
     transform: translateY(-10px);
     transition: opacity 0.20s ease-in-out, transform 0.20s ease-in-out, visibility 0.20s;
   }

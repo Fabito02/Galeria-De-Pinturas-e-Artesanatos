@@ -30,10 +30,10 @@ class Social {
 
         if (this.list.style.display === "none" || this.list.style.display === "") {
             this.list.style.display = "block";
-            this.drop.style.marginTop = isMobile ? "230px" : "555px";
+            this.drop.style.marginTop = isMobile ? "200px" : "555px";
         } else {
             this.list.style.display = "none";
-            this.drop.style.marginTop = isMobile ? "230px" : "370px";
+            this.drop.style.marginTop = isMobile ? "200px" : "370px";
         }
     }
 }
