@@ -16,18 +16,31 @@
         });
     });
 
-    document.getElementById('olho').addEventListener('mousedown', function() {
-      document.getElementById('password').type = 'text';
-      document.getElementById('olho').innerHTML = '<i class="fa-solid fa-eye-slash"></i>'
-    });
-    
-    document.getElementById('olho').addEventListener('mouseup', function() {
-      document.getElementById('password').type = 'password';
-      document.getElementById('olho').innerHTML = '<i class="fa-solid fa-eye"></i>'
-    });
-    
-    // Para que o password não fique exposto apos mover a imagem.
-    document.getElementById('olho').addEventListener('mousemove', function() {
-      document.getElementById('password').type = 'password';
-      document.getElementById('olho').innerHTML = '<i class="fa-solid fa-eye"></i>'
-    });
+let isPasswordVisible = false;
+
+document.getElementById('olho').addEventListener('mousedown', function() {
+  document.getElementById('password').type = 'text';
+  document.getElementById('olho').innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
+});
+
+document.getElementById('olho').addEventListener('mouseup', function() {
+  document.getElementById('password').type = 'password';
+  document.getElementById('olho').innerHTML = '<i class="fa-solid fa-eye"></i>';
+});
+
+// Para que o password não fique exposto após mover a imagem.
+document.getElementById('olho').addEventListener('mousemove', function() {
+  document.getElementById('password').type = 'password';
+  document.getElementById('olho').innerHTML = '<i class="fa-solid fa-eye"></i>';
+});
+
+document.getElementById('olho').addEventListener('click', function() {
+  if (isPasswordVisible) {
+    document.getElementById('password').type = 'password';
+    document.getElementById('olho').innerHTML = '<i class="fa-solid fa-eye"></i>';
+  } else {
+    document.getElementById('password').type = 'text';
+    document.getElementById('olho').innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
+  }
+  isPasswordVisible = !isPasswordVisible;
+});
