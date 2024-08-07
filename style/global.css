@@ -105,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
  color: rgba(0, 0, 0, 0.8);
   border-radius: 18px;
   transition: border-radius 0.2s;
-  background: rgba(255, 255, 255, 0.6).;
+  background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(15px);
   color: #302e2c;
 }
