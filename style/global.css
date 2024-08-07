@@ -97,17 +97,18 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(0.8);
 }
 
+.swal2-title, .swal2-content {
+ color: rgba(0, 0, 0, 0.8);
+}
+
 .swal2-popup {
+ color: rgba(0, 0, 0, 0.8);
   border-radius: 18px;
   transition: border-radius 0.2s;
-  background-color: #dddbdb49;
+  background: rgba(255, 255, 255, 0.3); 
   backdrop-filter: blur(15px);
   color: #302e2c;
 }
-
-.swall2-popup {
-  border-radius: 8px;
-} 
 
 .swal2-popup .swal2-actions .swal2-styled {
   border-radius: 8px;
