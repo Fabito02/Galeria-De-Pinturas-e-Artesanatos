@@ -53,7 +53,7 @@ class Gerenciar {
             icon: 'info',
             title: 'Operação cancelada!',
             confirmButtonColor: '#a07146',
-            iconColor: '#b9895d'
+            iconColor: '#e0b382'
           });
         }
       });

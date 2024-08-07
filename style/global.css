@@ -100,11 +100,22 @@ h1, h2, h3, h4, h5, h6 {
 .swal2-popup {
   border-radius: 18px;
   transition: border-radius 0.2s;
+  background-color: #dddbdb49;
+  backdrop-filter: blur(15px);
+  color: #302e2c;
 }
+
+.swall2-popup {
+  border-radius: 8px;
+} 
 
 .swal2-popup .swal2-actions .swal2-styled {
   border-radius: 8px;
-  transition: border-radius 0.2s;
+  transition: transform 0.2s;
+}
+
+.swal2-popup:active .swal2-actions:active .swal2-styled:active {
+  transform: scale(0.9);
 }
 
 /* Estilos para o cabeçalho */
@@ -418,15 +429,6 @@ footer {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
-  }
-
-  .kwaiIcon img {
-    margin-left: 5px;
-    transform: translateX(5px);
-  }
-
-  .kwaiIcon .kwaiText {
-    transform: translateX(5px);
   }
 
   .dot {

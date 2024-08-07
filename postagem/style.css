@@ -1,20 +1,22 @@
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #fff8f4;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 0px;
   margin: 0;
 }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Work Sans', sans-serif;
   font-weight: 700;
 }
+
 h2 {
   color: #3e2f28;
   font-weight: bold;
 }
+
 .login-container {
   display: flex;
   justify-content: center;
@@ -91,11 +93,10 @@ button:hover, input[type="submit"]:hover {
    background-color: #66492d;
  }
 
-
-
 .buttons {
   background-color: #85aa65;
 }
+
 .buttons:hover {
   background-color: #708d57;
 }
@@ -104,10 +105,12 @@ input,
 button {
   margin: 5px 0; 
 }
+
 .error {
   transform: translateY(-15px);
   color: #e70a0a;
 }
+
 .escolherArquivos {
   background-color: #daad73;
   width: auto;
@@ -120,16 +123,20 @@ button {
   padding: 6px 10px;
   transition: background-color 0.2s, color 0.2s;
 }
+
 .escolherArquivos:hover {
   background-color: #b39063;
 }
+
 .escolherArquivosInput {
   display: none;
 }
+
 h4 {
     color: #422d24;
     font-size: 22px;
 }
+
 textarea {
   position: absolute;
   transform: translateX(-50%);
@@ -158,8 +165,32 @@ textarea:hover {
 footer {
   height: 70px;
 }
+
 h1 {
   text-align: center;
+}
+
+.password {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.olho {
+  display: flex;
+  align-items: center;
+  color: #3e2f28;
+  font-size: 14px;
+  cursor: pointer;
+  position: absolute;
+  right: 62px;
+  transform: translateY(1px);
+  transition: transform 0.05s;
+}
+
+.olho:active {
+  transform: scale(0.9) translateY(2px);
 }
 
 @media (max-width: 720px) {
@@ -167,6 +198,7 @@ h1 {
     font-size: 28px;
     text-align: center;
   }
+
   .box {
     max-width: 75%;
     height: auto;

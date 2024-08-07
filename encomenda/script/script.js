@@ -33,7 +33,7 @@ novoPedido.onsubmit = function(event) {
           title: "Espera aí!",
           text: "Preencha todos os campos obrigatórios!",
           confirmButtonColor: "#a07146",
-          iconColor: "#b9895d",
+          iconColor: "#e0b382",
         });
         return;
       }

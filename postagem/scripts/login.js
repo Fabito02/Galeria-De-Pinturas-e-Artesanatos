@@ -15,3 +15,19 @@
           document.getElementById('message').textContent = errorMessage;
         });
     });
+
+    document.getElementById('olho').addEventListener('mousedown', function() {
+      document.getElementById('password').type = 'text';
+      document.getElementById('olho').innerHTML = '<i class="fa-solid fa-eye-slash"></i>'
+    });
+    
+    document.getElementById('olho').addEventListener('mouseup', function() {
+      document.getElementById('password').type = 'password';
+      document.getElementById('olho').innerHTML = '<i class="fa-solid fa-eye"></i>'
+    });
+    
+    // Para que o password não fique exposto apos mover a imagem.
+    document.getElementById('olho').addEventListener('mousemove', function() {
+      document.getElementById('password').type = 'password';
+      document.getElementById('olho').innerHTML = '<i class="fa-solid fa-eye"></i>'
+    });
