@@ -4,46 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Artes de Gleiciane Lima</title>
-  <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/global.css">
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style/initialPage.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="icon" type="image/png" href="/favicon.png">
 </head>
 <body>
   <div class="return" id="return"><i class="fa-solid fa-arrow-up" onclick="primeiraParte()"></i></div>
   <header>
   <div class="botoes">
-      <img src="img/logo.png" class="logo" alt="Imagem 1" onclick="window.location.href=''">
-      <div class="texto">
-         
+      <img src="/img/logo.png" class="logo" alt="Imagem 1" onclick="window.location.href='/'">
+
+      <div class="headerButtons">
+        <button class="button .left" onclick="window.location.href='/encomenda/'" ><span class="rounded-underline">Fazer Encomenda</span></button>
+        <button class="button" onclick="window.location.href='/jequitinhonha/'"><span class="rounded-underline">Vale do Jequitinhonha</span></button>
+        <a class="desktopSocial setaAnimada" onclick="mostrarRedesSociais()" id="setaAnimada1" style=" cursor: pointer; transform: translateY(-2px)">Social <div class="arrow-down" style="display: inline-block;"><i class="fa-solid fa-caret-down" style="color: #643f20; font-size: 21px; transform: translateY(1px); margin-left: 2px;"></i></div></a>
+      <div class="sociais social">
+        <ul>
+          <li><a href="https://www.facebook.com/share/M3rtkJkxFXiuwMPU/?mibextid=qi2Omg" target="_blank"><img src="/icons/facebook.svg"><span>Facebook</span></a></li>
+
+          <li><a href="https://www.instagram.com/gleiciane_lima_pinturas?igsh=MWM1Nm4zaGptM2V3YQ==" target="_blank"><img src="/icons/instagram.svg"><span>Instagram</span>
+          </a></li> 
+
+          <li><span><a href="https://www.kwai.com/@vivendoarteecomtdh" target="_blank" ><img  src="/icons/kwai.svg" style="padding: 2.5px;"> <span>Kwai</span></a></span></li>
+        </ul>
       </div>
+        <button class="galleryButton" onclick="window.location.href='/gallery/'"><i class="fas fa-images" style="margin-right: 5px;"></i> Minha Galeria</button>
+      </div>
+      <button class="galleryButton galleryBtMobile" onclick="window.location.href='/gallery/'"><i class="fas fa-images" style="margin-right: 5px;"></i> Minha Galeria</button>
+
   <div class="menu" id="menu" onclick="animacaoDoMenu()">
       <span class="barrinha-menu"></span>
       <span class="barrinha-menu"></span>
       <span class="barrinha-menu"></span>
   </div>
-  <div class="dropdown" id="dropdown"> 
-        <button class="galleryButton" onclick="window.location.href='gallery/'">
-        <i class="fas fa-images" style="margin-right: 5px;"></i> Minha Galeria
-    </button>
-      <a href="">Página Inicial</a>
-      <a href="encomenda/">Fazer Encomenda</a>
-      <a onclick="mostrarRedesSociais()" id="setaAnimada">Redes Sociais <div class="arrow-down" style="display: inline-block;"><i class="fa-solid fa-caret-down" style="color: #643f20; font-size: 21px; transform: translateY(1px);"></i></div></a>
-      <div id="social" style="display: none;" class="toggle-button">
-        <ul>
-          <li><a href="https://www.facebook.com/share/M3rtkJkxFXiuwMPU/?mibextid=qi2Omg" target="_blank"><svg style="margin: 1px" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="39" height="39" viewBox="0 0 48 48"> <path fill="#3F51B5" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"></path><path fill="#FFF" d="M34.368,25H31v13h-5V25h-3v-4h3v-2.41c0.002-3.508,1.459-5.59,5.592-5.59H35v4h-2.287C31.104,17,31,17.6,31,18.723V21h4L34.368,25z"></path> </svg><span>Facebook</span></a></li>
+  <div class="dropdown" id="dropdown">
+      <a href="/">Página Inicial</a>
+      <a href="/encomenda/">Fazer Encomenda</a>
+      <a class="setaAnimada" onclick="mostrarRedesSociais()" id="setaAnimada2">Redes Sociais <div class="arrow-down" style="display: inline-block;"><i class="fa-solid fa-caret-down" style="color: #643f20; font-size: 21px; transform: translateY(1px);"></i></div></a>
+        <ul class="social">
+          <li><a href="https://www.facebook.com/share/M3rtkJkxFXiuwMPU/?mibextid=qi2Omg" target="_blank"><img src="/icons/facebook.svg"><span>Facebook</span></a></li>
 
-          <li><a href="https://www.instagram.com/gleiciane_lima_pinturas?igsh=MWM1Nm4zaGptM2V3YQ==" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 48 48"> <radialGradient id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1" cx="19.38" cy="42.035" r="44.899" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fd5"></stop><stop offset=".328" stop-color="#ff543f"></stop><stop offset=".348" stop-color="#fc5245"></stop><stop offset=".504" stop-color="#e64771"></stop><stop offset=".643" stop-color="#d53e91"></stop><stop offset=".761" stop-color="#cc39a4"></stop><stop offset=".841" stop-color="#c837ab"></stop></radialGradient><path fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20 c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20 C42.014,38.383,38.417,41.986,34.017,41.99z"></path><radialGradient id="yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2" cx="11.786" cy="5.54" r="29.813" gradientTransform="matrix(1 0 0 .6663 0 1.849)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4168c9"></stop><stop offset=".999" stop-color="#4168c9" stop-opacity="0"></stop></radialGradient><path fill="url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20 c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20 C42.014,38.383,38.417,41.986,34.017,41.99z"></path><path fill="#fff" d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5 s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"></path><circle cx="31.5" cy="16.5" r="1.5" fill="#fff"></circle><path fill="#fff" d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12 C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"></path></svg> <span>Instagram</span>
-          </a></li> 
+          <li><a href="https://www.instagram.com/gleiciane_lima_pinturas?igsh=MWM1Nm4zaGptM2V3YQ==" target="_blank"><img src="/icons/instagram.svg"> <span>Instagram</span></a></li> 
 
-          <li><span class="kwaiIcon" ><a href="https://www.kwai.com/@vivendoarteecomtdh" target="_blank" ><img  src="icons/kwai.png" width="30px" height="30px" style="margin-left: -5px;"> <span class="kwaiText">Kwai</span></a></span></li>
+          <li><span><a href="https://www.kwai.com/@vivendoarteecomtdh" target="_blank" ><img  src="/icons/kwai.svg" style="padding: 3px;"> <span>Kwai</span></a></span></li>
         </ul>
-      </div>
-      <a href="jequitinhonha/">Vale do Jequitinhonha</a>
+      <a href="/jequitinhonha/">Vale do Jequitinhonha</a>
   </div>
   </div>
 </header>
 
 <main>
+  <div class="abaPrincipal">
+
   <div class="slider">
 
     <img src="img/img1.png" alt="Imagens" >
@@ -69,6 +82,7 @@
     <img src="img/img11.png" alt="Imagens" >
 
   </div>
+
   <div class="navigation-button">
     <span class="dot active" onclick="changeSlide(0)"></span>
     <span class="dot" onclick="changeSlide(1)"></span>
@@ -81,40 +95,66 @@
     <span class="dot" onclick="changeSlide(8)"></span>
     <span class="dot" onclick="changeSlide(9)"></span>
     <span class="dot" onclick="changeSlide(10)"></span>
+
   </div>
 
-  <br><br>
+  <br><br></div>
   <div class="bio">
-    <div class="bioTitle">
-  Conheça meu Trabalho
-</div><br>
+
 <div class="miniBio">
-  <h1>Quem sou?</h1>
-  <p><div class="selfie"><img src="img/selfie.jpeg"></div>Sou uma artista autodidata, sem formação na área de pinturas. Tenho ensino médio completo e sou uma apaixonada pela pintura, que acredita que podemos fazer qualquer coisa, basta ter dedicação e vontade. <br><br>Desenvolvi minhas próprias técnicas de pintura e, assim, consigo passar para os meus alunos uma forma mais fácil e prática de começar a pintar. <br><br>Vejo a pintura como terapia e fonte de renda. Para muitos que vivem em situação de extrema pobreza, pode ser uma alternativa para mudar de vida.</p><br>
-  <h1>Propósito</h1>
-  <p>Meu objetivo é levar a pintura em madeira para as pessoas que estão sem perspectivas ou que buscam experiência nesta área. Por ser um material acessível a todos, podem dar continuidade em casa por conta própria. Podem fazer para vender ou decorar suas casas.
-  <p><br>
-    <div class="proposito"><img src="img/propósito.png"></div>
-    <h1>Minhas Competências</h1>
+  <div class="sobre">
+
+    <div class="txt">    
+      <div class="bioTitle">
+  Conheça meu Trabalho
+</div>
+      <h1 class="topic">Quem sou?</h1>
+  <p>Sou uma artista autodidata, sem formação na área de pinturas. Tenho ensino médio completo e sou uma apaixonada pela pintura, que acredita que podemos fazer qualquer coisa, basta ter dedicação e vontade.
+    <br><br>Desenvolvi minhas próprias técnicas de pintura e, assim, consigo passar para os meus alunos uma forma mais fácil e prática de começar a pintar.
+    <br><br>Vejo a pintura como terapia e fonte de renda. Para muitos que vivem em situação de extrema pobreza, pode ser uma alternativa para mudar de vida.</p><br>
+</div>
+
+    <span><img class="imagem" src="img/selfie.jpeg"></span>
+    </div>
+<div class="sobre sobreCorDiferente">
+  
+  <img class="imagem" src="img/propósito.png"><br><br>
+<div class="txt">
+  <p>
+    
+    <h1 class="topic">Propósito</h1>
+    <p>Meu objetivo é levar a pintura em madeira para as pessoas que estão sem perspectivas ou que buscam experiência nesta área. Por ser um material acessível a todos, podem dar continuidade em casa por conta própria. Podem fazer para vender ou decorar suas casas.
+      <br>
+    <h1 class="topic">Minhas Competências</h1>
     <h2>• Colaboração</h2> 
     <span class="item-list">Capacidade de saber trabalhar em equipe, discutir ideias, ter empatia e estar aberto para trocar conhecimento e experiência.</span>
     <h2>• Flexibilidade</h2>
     <span class="item-list">Prontos para desafios e
       preparados para mudanças.</span>
-  </p><br><br>
-      <h1>Experiência Profissional</h1>
+  </p></div>
+    
+
+</div>
+
+<div class="sobre">
+  <div class="txt">
+      <h1 class="topic">Experiência Profissional</h1>
       <h2>• Onde Trabalhei</h2>
-      <span class="item-list">Monitora de oficina de pintura para crianças e adolescentes na Oncip Monsa.</span>
+      <span class="item-list">Monitora de oficina de pintura para crianças e adolescentes na Oncip Monsa.</span></div>
       
-      <div class="experiencia"><img src="img/experiencia.png"></div><br>
-      <h1>A Arte de Pintar é Para Todos</h1>
+      <img class="imagem" src="img/experiencia.png"><br></div>
+      <div class="sobre sobreCorDiferente"><img src="/img/Arte Para Todos.svg" alt="Garota Pintando">
+      <div class="txt">
+      <h1 class="topic">A Arte de Pintar é Para Todos</h1>
       O objetivo é ensinar a quem tiver interesse em começar a pintar, para que todos possam aproveitar os ótimos benefícios que a pintura oferece. Além disso, quero mostrar a arte de pintar como uma possível fonte de renda para famílias carentes, destacando como essa atividade pode ser transformada em uma alternativa econômica viável. <br><br>
-      <button class="btGaleria" onclick="window.location.href='gallery/'"><i class="fas fa-images" style="margin-right: 5px;"></i>Acessar Minha Galeria</button>
-</div> 
+      <button class="btGaleria" onclick="window.location.href='gallery/'"><i class="fas fa-images" style="margin-right: 5px;"></i>Acessar Minha Galeria</button></div>
+    </div> 
+
+</div>
 </main>
 <footer></footer>
-<script src="script/slider.js"></script>
 </body>
 <script src="script/global.js"></script>
+<script src="script/slider.js"></script>
 </html>
 

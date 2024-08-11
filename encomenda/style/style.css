@@ -19,22 +19,22 @@
   background-color: #f4f4f4;
 }
 
-textarea {
+.bloco textarea {
   padding: 10px;
   border-style: none;
   resize: none;
   position: absolute;
-  width: 250px;
-  height: 80px;
+  width: 100%;
+  max-width: 240px;
+  height: 100px;
   outline: none;
   border-radius: 12px;
   box-shadow: 0px 0px 7px rgba(94, 94, 94, 0.5);
   transition: box-shadow 0.25s, width 0.25s, height 0.25s, border-radius 0.25s, background-color 0.25s;
 }
 
-textarea:focus {
-  width: 450px;
-  height: 250px;
+.bloco textarea:focus {
+  height: 255px;
   box-shadow: 0px 0px 15px rgba(40, 40, 40, 0.5);
 }
 
@@ -62,11 +62,10 @@ h4, h5 {
 
 /* Estilos para o formulário */
 .form {
-  background-color: #f4e5cf;
   border-radius: 8px;
   padding: 30px;
   margin: auto;
-  max-width: 75%;
+  max-width: 85%;
   height: 100%;
   justify-content: center;
   margin-top: 40px;
@@ -74,8 +73,33 @@ h4, h5 {
   position: relative;
 }
 
+.blocosContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.bloco {
+  margin: 0;
+  max-width: 300px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px; 
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bloco:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 .submit {
-  background-color: #a07146;
+  background-color: #b48d66;
   color: #fff;
   border: none;
   padding: 6px 10px;
@@ -95,7 +119,7 @@ h4, h5 {
 }
 
 .submit:hover {
-  background-color: #66492d;
+  background-color: #977450;
 }
 
 /* Espaço */
@@ -135,12 +159,11 @@ h4, h5 {
   }
 
   textarea {
-    width: 61vw;
+    max-width: 195px;
     margin-right: 15px;
   }
 
   textarea:focus {
-    width: 71vw;
     height: 250px;
   }
 

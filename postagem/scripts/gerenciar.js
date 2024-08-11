@@ -14,15 +14,15 @@ class Gerenciar {
         inputAttributes: {
           maxlength: 250
         },
-        showCancelButton: true,
+        activeCancelButton: true,
         confirmButtonText: 'Salvar',
         confirmButtonColor: '#5caf4c',
         cancelButtonColor: '#dd4141',
         cancelButtonText: 'Cancelar',
-        showLoaderOnConfirm: true,
+        activeLoaderOnConfirm: true,
         preConfirm: (newDescription) => {
           if (!newDescription) {
-            Swal.showValidationMessage('Você precisa escrever algo para prosseguir.');
+            Swal.activeValidationMessage('Você precisa escrever algo para prosseguir.');
           }
           return newDescription;
         }
@@ -65,7 +65,7 @@ class Gerenciar {
   Swal.fire({
     title: 'Tem certeza de que deseja excluir esta postagem?',
     icon: 'warning',
-    showCancelButton: true,
+    activeCancelButton: true,
     confirmButtonColor: '#5caf4c',
     cancelButtonColor: '#dd4141',
     confirmButtonText: 'Sim, excluir!',
@@ -125,15 +125,15 @@ class Gerenciar {
         inputAttributes: {
           maxlength: 250
         },
-        showCancelButton: true,
+        activeCancelButton: true,
         confirmButtonText: 'Salvar',
         confirmButtonColor: '#5caf4c',
         cancelButtonColor: '#dd4141',
         cancelButtonText: 'Cancelar',
-        showLoaderOnConfirm: true,
+        activeLoaderOnConfirm: true,
         preConfirm: (newDescription) => {
           if (!newDescription) {
-            Swal.showValidationMessage('Você precisa escrever algo para prosseguir.');
+            Swal.activeValidationMessage('Você precisa escrever algo para prosseguir.');
           }
           return newDescription;
         }
@@ -176,7 +176,7 @@ deleteVideo() {
   Swal.fire({
     title: 'Tem certeza de que deseja excluir esta postagem?',
     icon: 'warning',
-    showCancelButton: true,
+    activeCancelButton: true,
     confirmButtonColor: '#5caf4c',
     cancelButtonColor: '#dd4141',
     confirmButtonText: 'Sim, excluir!',
