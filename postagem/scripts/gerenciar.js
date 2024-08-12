@@ -14,7 +14,7 @@ class Gerenciar {
         inputAttributes: {
           maxlength: 250
         },
-        activeCancelButton: true,
+        showCancelButton: true,
         confirmButtonText: 'Salvar',
         confirmButtonColor: '#5caf4c',
         cancelButtonColor: '#dd4141',
@@ -65,7 +65,7 @@ class Gerenciar {
   Swal.fire({
     title: 'Tem certeza de que deseja excluir esta postagem?',
     icon: 'warning',
-    activeCancelButton: true,
+    showCancelButton: true,
     confirmButtonColor: '#5caf4c',
     cancelButtonColor: '#dd4141',
     confirmButtonText: 'Sim, excluir!',
@@ -125,7 +125,7 @@ class Gerenciar {
         inputAttributes: {
           maxlength: 250
         },
-        activeCancelButton: true,
+        showCancelButton: true,
         confirmButtonText: 'Salvar',
         confirmButtonColor: '#5caf4c',
         cancelButtonColor: '#dd4141',
@@ -176,7 +176,7 @@ deleteVideo() {
   Swal.fire({
     title: 'Tem certeza de que deseja excluir esta postagem?',
     icon: 'warning',
-    activeCancelButton: true,
+    showCancelButton: true,
     confirmButtonColor: '#5caf4c',
     cancelButtonColor: '#dd4141',
     confirmButtonText: 'Sim, excluir!',

@@ -147,13 +147,14 @@
 .video {
   transform: translateX(max-width);
   max-width: 500px;
+  max-height: 500px;
 }
 
 .video video {
   box-shadow: 0 0px 8px rgba(0, 0, 0, 0.255);
   width: 100%;
   border-radius: 12px;
-  height: auto;
+  height: 100%;
 }
 
 @keyframes marquee {
@@ -255,7 +256,7 @@ main {
   transform: translateY(calc(-50vh + 45px)) translateX(calc(50vw - 45px)) scale(0.9);
 }
 
-img {
+.modal img {
   border-radius: 12px;
 }
 
