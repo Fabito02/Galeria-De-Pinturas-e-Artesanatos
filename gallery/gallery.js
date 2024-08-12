@@ -25,7 +25,7 @@ class Firebase {
 
         const text = document.createElement('div');
         text.classList.add('text');
-        text.textContent = imageData.description;
+        text.innerHTML = `${imageData.description}<br><br>(${imageData.dataDaPostagem})`;
 
         overlay.appendChild(text);
         imageElement.appendChild(overlay);
@@ -53,13 +53,14 @@ class Firebase {
             const video = document.createElement('video');
             video.src = videoData.fileUrl;
             video.setAttribute('controls', true);
+            video.volume = 0
             videoElement.appendChild(video);
 
             const text = document.createElement('span');
             text.classList.add('textVideo');
             const conteudo = document.createElement('span');
             conteudo.classList.add('conteudoText');
-            conteudo.textContent = videoData.description;
+            conteudo.textContent = `${videoData.description} - (${videoData.dataDaPostagem})`;
             text.appendChild(conteudo);
             videoElement.appendChild(text);
 

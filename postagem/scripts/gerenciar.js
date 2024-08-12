@@ -270,7 +270,7 @@ deleteVideo() {
         imageElement.appendChild(img);
 
         const description = document.createElement('h4');
-        description.textContent = imageData.description;
+        description.innerHTML = `${imageData.description}<br><br>(${imageData.dataDaPostagem})`;
         imageElement.appendChild(description);
 
         // Adiciona os botões de edição e remoção
@@ -300,10 +300,11 @@ deleteVideo() {
           const video = document.createElement('video');
           video.src = videoData.fileUrl;
           video.setAttribute('controls', true);
+          video.volume = 0
           videoElement.appendChild(video);
 
           const description = document.createElement('h4');
-          description.textContent = videoData.description;
+          description.innerHTML = `${videoData.description}<br><br>${videoData.dataDaPostagem})`;
           videoElement.appendChild(description);
 
           // Adiciona os botões de edição e remoção
